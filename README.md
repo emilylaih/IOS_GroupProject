@@ -91,16 +91,15 @@ The user could add people to the friend’s list.
 
 ### 3. Navigation
 
-<img src="http://g.recordit.co/MBYBGRzSNA.gif" width=600>
+<img src="http://g.recordit.co/MBYBGRzSNA.gif" width=200>
 
 
 ## Wireframes
-<img src="http://g.recordit.co/q23067z6Dd.gif" width=600>
-
+[Add picture of your hand sketched wireframes in this section]
 https://xd.adobe.com/view/19ed0d82-74f4-4759-8da0-d5602369c9fe-4cbe/?hints=off
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="http://g.recordit.co/MBYBGRzSNA.gif" width=600>
+<img src="http://g.recordit.co/MBYBGRzSNA.gif" width=200>
 
 ### [BONUS] Interactive Prototype
 https://xd.adobe.com/view/19ed0d82-74f4-4759-8da0-d5602369c9fe-4cbe/?hints=off
