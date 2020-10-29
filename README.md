@@ -105,12 +105,104 @@ https://xd.adobe.com/view/19ed0d82-74f4-4759-8da0-d5602369c9fe-4cbe/?hints=off
 https://xd.adobe.com/view/19ed0d82-74f4-4759-8da0-d5602369c9fe-4cbe/?hints=off
 
 ## Schema 
-[This section will be completed in Unit 9]
 
 ### Models
-[Add table of models]
+
+
+
+User
+Property
+Type
+Description
+userId
+Number
+unique id for the user
+userName
+String
+Unique username for the user
+groupInvitations
+Array[Boolean]
+Invitations to join group
+profilePic
+File
+Profile picture for the user
+password
+String
+Login password for the user
+latitude
+Number
+Users last updated latitude
+longitude
+Number
+Users last updated longitude
+userGroups
+Array[String]
+A list of group ID
+
+
+
+
+Group
+Property
+Type
+Description
+groupId
+String
+unique id for the group
+groupName
+String
+Unique username for the user
+groupPic
+File
+Profile picture for the group
+password
+String
+Login password for the user
+latitude
+Number
+Users last updated latitude
+members
+Array[UserID]
+A list of userID
+membersLongitude
+Array[longitude]
+A list of longitude parallel to members
+membersLatitude
+Array[latitude]
+A list of latitude parallel to members
+
+
+
 
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+Login/Sign Up Screen
+Get user logged-in information
+ 
+User Profile
+Update user profile image
+Display user information
+Create New Group
+ 
+Group Screen
+Fetch groupID
+Display all the groups that the user is in
+Add/Send Invite to userName
+ 
+Group Setting Screen
+TableViewCells of members in that group
+Adding new member feature
+ 
+Chat Screen
+Get groupID
+Get profile image
+ 
+Map Screen
+Update user location
+Get the map’s pin location
+Display other members’ locations
+Send I’m Here notification
+
