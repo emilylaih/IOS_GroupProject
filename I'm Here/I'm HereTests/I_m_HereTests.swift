@@ -2,7 +2,7 @@
 //  I_m_HereTests.swift
 //  I'm HereTests
 //
-//  Created by Emily Laih on 11/1/20.
+//  Created by Mina Lee on 11/1/20.
 //
 
 import XCTest
