@@ -2,7 +2,7 @@
 //  InputContainerView.swift
 //  I'm Here
 //
-//  Created by Nick Fong on 11/1/20.
+//  Credit to Stephan Dowless from https://www.udemy.com/user/stephan-dowless/
 //
 
 import UIKit
