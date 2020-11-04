@@ -15,6 +15,14 @@
 		F0A9A3FB254F612300E97F9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A9A3F9254F612300E97F9B /* LaunchScreen.storyboard */; };
 		F0A9A406254F612300E97F9B /* I_m_HereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9A405254F612300E97F9B /* I_m_HereTests.swift */; };
 		F0A9A411254F612300E97F9B /* I_m_HereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9A410254F612300E97F9B /* I_m_HereUITests.swift */; };
+		F0A9A42F254F634400E97F9B /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9A42D254F634400E97F9B /* InputContainerView.swift */; };
+		F0A9A430254F634400E97F9B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9A42E254F634400E97F9B /* CustomTextField.swift */; };
+		F0A9A43B254F63D100E97F9B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9A43A254F63D100E97F9B /* Extensions.swift */; };
+		F0A9A440254F63E300E97F9B /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9A43F254F63E300E97F9B /* ConversationsController.swift */; };
+		F0A9A446254F651C00E97F9B /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9A444254F651C00E97F9B /* RegistrationController.swift */; };
+		F0A9A447254F651C00E97F9B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9A445254F651C00E97F9B /* LoginController.swift */; };
+		F0A9A44D254F655C00E97F9B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9A44B254F655C00E97F9B /* LoginViewModel.swift */; };
+		F0A9A44E254F655C00E97F9B /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9A44C254F655C00E97F9B /* RegistrationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		F0A9A40C254F612300E97F9B /* I'm HereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "I'm HereUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A9A410254F612300E97F9B /* I_m_HereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_m_HereUITests.swift; sourceTree = "<group>"; };
 		F0A9A412254F612300E97F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0A9A42D254F634400E97F9B /* InputContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputContainerView.swift; path = "../../../../../Downloads/IOS_GroupProject-main 2/InputContainerView.swift"; sourceTree = "<group>"; };
+		F0A9A42E254F634400E97F9B /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = "../../../../../Downloads/IOS_GroupProject-main 2/CustomTextField.swift"; sourceTree = "<group>"; };
+		F0A9A43A254F63D100E97F9B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "../../../../../Downloads/IOS_GroupProject-main 2/Extensions.swift"; sourceTree = "<group>"; };
+		F0A9A43F254F63E300E97F9B /* ConversationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversationsController.swift; path = "../../../../../Downloads/IOS_GroupProject-main 2/ConversationsController.swift"; sourceTree = "<group>"; };
+		F0A9A444254F651C00E97F9B /* RegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistrationController.swift; path = "../../../../../../Downloads/IOS_GroupProject-main/RegistrationController.swift"; sourceTree = "<group>"; };
+		F0A9A445254F651C00E97F9B /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = "../../../../../../Downloads/IOS_GroupProject-main/LoginController.swift"; sourceTree = "<group>"; };
+		F0A9A44B254F655C00E97F9B /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = "../../../../../../Downloads/IOS_GroupProject-main/LoginViewModel.swift"; sourceTree = "<group>"; };
+		F0A9A44C254F655C00E97F9B /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistrationViewModel.swift; path = "../../../../../../Downloads/IOS_GroupProject-main/RegistrationViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,11 @@
 		F0A9A3ED254F612200E97F9B /* I'm Here */ = {
 			isa = PBXGroup;
 			children = (
+				F0A9A439254F63BA00E97F9B /* Utilities */,
+				F0A9A438254F63B000E97F9B /* API */,
+				F0A9A436254F638F00E97F9B /* Controllers */,
+				F0A9A434254F635700E97F9B /* View Model */,
+				F0A9A421254F62A300E97F9B /* View */,
 				F0A9A3EE254F612200E97F9B /* AppDelegate.swift */,
 				F0A9A3F0254F612200E97F9B /* SceneDelegate.swift */,
 				F0A9A3F2254F612200E97F9B /* ViewController.swift */,
@@ -126,6 +147,65 @@
 				F0A9A412254F612300E97F9B /* Info.plist */,
 			);
 			path = "I'm HereUITests";
+			sourceTree = "<group>";
+		};
+		F0A9A421254F62A300E97F9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0A9A42E254F634400E97F9B /* CustomTextField.swift */,
+				F0A9A42D254F634400E97F9B /* InputContainerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0A9A434254F635700E97F9B /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0A9A435254F636600E97F9B /* Authentication */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		F0A9A435254F636600E97F9B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F0A9A44B254F655C00E97F9B /* LoginViewModel.swift */,
+				F0A9A44C254F655C00E97F9B /* RegistrationViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F0A9A436254F638F00E97F9B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0A9A43F254F63E300E97F9B /* ConversationsController.swift */,
+				F0A9A437254F63A500E97F9B /* Authentication */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F0A9A437254F63A500E97F9B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F0A9A445254F651C00E97F9B /* LoginController.swift */,
+				F0A9A444254F651C00E97F9B /* RegistrationController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F0A9A438254F63B000E97F9B /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F0A9A439254F63BA00E97F9B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F0A9A43A254F63D100E97F9B /* Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +339,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0A9A3F3254F612200E97F9B /* ViewController.swift in Sources */,
+				F0A9A44E254F655C00E97F9B /* RegistrationViewModel.swift in Sources */,
+				F0A9A440254F63E300E97F9B /* ConversationsController.swift in Sources */,
+				F0A9A43B254F63D100E97F9B /* Extensions.swift in Sources */,
+				F0A9A42F254F634400E97F9B /* InputContainerView.swift in Sources */,
+				F0A9A447254F651C00E97F9B /* LoginController.swift in Sources */,
 				F0A9A3EF254F612200E97F9B /* AppDelegate.swift in Sources */,
 				F0A9A3F1254F612200E97F9B /* SceneDelegate.swift in Sources */,
+				F0A9A446254F651C00E97F9B /* RegistrationController.swift in Sources */,
+				F0A9A44D254F655C00E97F9B /* LoginViewModel.swift in Sources */,
+				F0A9A430254F634400E97F9B /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
