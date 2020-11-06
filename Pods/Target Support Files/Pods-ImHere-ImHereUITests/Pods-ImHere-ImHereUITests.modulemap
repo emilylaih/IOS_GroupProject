@@ -1,0 +1,6 @@
+framework module Pods_ImHere_ImHereUITests {
+  umbrella header "Pods-ImHere-ImHereUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

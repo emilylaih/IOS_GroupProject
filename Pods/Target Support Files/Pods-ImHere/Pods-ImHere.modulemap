@@ -1,0 +1,6 @@
+framework module Pods_ImHere {
+  umbrella header "Pods-ImHere-umbrella.h"
+
+  export *
+  module * { export * }
+}
