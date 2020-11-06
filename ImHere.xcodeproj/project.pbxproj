@@ -17,7 +17,7 @@
 		809ABCAF254F62140006552C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809ABCAE254F62140006552C /* Assets.xcassets */; };
 		809ABCB2254F62140006552C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809ABCB0254F62140006552C /* LaunchScreen.storyboard */; };
 		809ABCBD254F62140006552C /* I_m_HereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCBC254F62140006552C /* I_m_HereTests.swift */; };
-		809ABCC8254F62140006552C /* I_m_HereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCC7254F62140006552C /* I_m_HereUITests.swift */; };
+		809ABCC8254F62140006552C /* ImHereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCC7254F62140006552C /* ImHereUITests.swift */; };
 		809ABCE3254F64A10006552C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCE0254F64A10006552C /* Extensions.swift */; };
 		809ABCE4254F64A10006552C /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCE1254F64A10006552C /* ConversationsController.swift */; };
 		809ABCE5254F64A10006552C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCE2254F64A10006552C /* CustomTextField.swift */; };
@@ -49,11 +49,7 @@
 
 /* Begin PBXFileReference section */
 		025F05D971622C3C55DBB2D0 /* Pods_ImHereTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImHereTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AA79BC92BDD0D8F7C79E1D9 /* Pods-I'm Here-I'm HereUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm Here-I'm HereUITests.debug.xcconfig"; path = "Target Support Files/Pods-I'm Here-I'm HereUITests/Pods-I'm Here-I'm HereUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5863B3306EBEB59E7ECD0D03 /* Pods-ImHereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHereTests.debug.xcconfig"; path = "Target Support Files/Pods-ImHereTests/Pods-ImHereTests.debug.xcconfig"; sourceTree = "<group>"; };
-		58C2D4F207C91DD1D3079968 /* Pods-I'm Here-I'm HereUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm Here-I'm HereUITests.release.xcconfig"; path = "Target Support Files/Pods-I'm Here-I'm HereUITests/Pods-I'm Here-I'm HereUITests.release.xcconfig"; sourceTree = "<group>"; };
-		642C571446532E47E370D6AB /* Pods-I'm HereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm HereTests.release.xcconfig"; path = "Target Support Files/Pods-I'm HereTests/Pods-I'm HereTests.release.xcconfig"; sourceTree = "<group>"; };
-		7FF1D8B9DABF1FD285D33E62 /* Pods-I'm Here.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm Here.release.xcconfig"; path = "Target Support Files/Pods-I'm Here/Pods-I'm Here.release.xcconfig"; sourceTree = "<group>"; };
 		804F664C25552D56009039C2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		804F66B62555442C009039C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		807AA9F425535DFC0011C972 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +63,7 @@
 		809ABCBC254F62140006552C /* I_m_HereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_m_HereTests.swift; sourceTree = "<group>"; };
 		809ABCBE254F62140006552C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		809ABCC3254F62140006552C /* ImHereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImHereUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		809ABCC7254F62140006552C /* I_m_HereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_m_HereUITests.swift; sourceTree = "<group>"; };
+		809ABCC7254F62140006552C /* ImHereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImHereUITests.swift; sourceTree = "<group>"; };
 		809ABCC9254F62140006552C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		809ABCE0254F64A10006552C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		809ABCE1254F64A10006552C /* ConversationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
@@ -80,12 +76,10 @@
 		809ABCEF254F64B30006552C /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		891EF3379E08589882E474C5 /* Pods_ImHere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImHere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8950C33342A99901D78C85C8 /* Pods-ImHere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHere.debug.xcconfig"; path = "Target Support Files/Pods-ImHere/Pods-ImHere.debug.xcconfig"; sourceTree = "<group>"; };
-		8FF735BDA5CCD17B937F0436 /* Pods-I'm HereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm HereTests.debug.xcconfig"; path = "Target Support Files/Pods-I'm HereTests/Pods-I'm HereTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C94DF6F767262AC482816F1 /* Pods-ImHere-ImHereUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHere-ImHereUITests.release.xcconfig"; path = "Target Support Files/Pods-ImHere-ImHereUITests/Pods-ImHere-ImHereUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A6075DE47DBEAC133327A4C6 /* Pods-ImHere-ImHereUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHere-ImHereUITests.debug.xcconfig"; path = "Target Support Files/Pods-ImHere-ImHereUITests/Pods-ImHere-ImHereUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6BE1C30D51DCCDF56D9757D /* Pods_ImHere_ImHereUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImHere_ImHereUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BC3FBBC2E0082CB62DB623 /* Pods-ImHere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHere.release.xcconfig"; path = "Target Support Files/Pods-ImHere/Pods-ImHere.release.xcconfig"; sourceTree = "<group>"; };
-		E0868FC535B2D9E05D03605A /* Pods-I'm Here.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm Here.debug.xcconfig"; path = "Target Support Files/Pods-I'm Here/Pods-I'm Here.debug.xcconfig"; sourceTree = "<group>"; };
 		EC945917278F314990777A2F /* Pods-ImHereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHereTests.release.xcconfig"; path = "Target Support Files/Pods-ImHereTests/Pods-ImHereTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,12 +114,6 @@
 		0AC843E91483BA38B6106ADA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E0868FC535B2D9E05D03605A /* Pods-I'm Here.debug.xcconfig */,
-				7FF1D8B9DABF1FD285D33E62 /* Pods-I'm Here.release.xcconfig */,
-				1AA79BC92BDD0D8F7C79E1D9 /* Pods-I'm Here-I'm HereUITests.debug.xcconfig */,
-				58C2D4F207C91DD1D3079968 /* Pods-I'm Here-I'm HereUITests.release.xcconfig */,
-				8FF735BDA5CCD17B937F0436 /* Pods-I'm HereTests.debug.xcconfig */,
-				642C571446532E47E370D6AB /* Pods-I'm HereTests.release.xcconfig */,
 				8950C33342A99901D78C85C8 /* Pods-ImHere.debug.xcconfig */,
 				B8BC3FBBC2E0082CB62DB623 /* Pods-ImHere.release.xcconfig */,
 				A6075DE47DBEAC133327A4C6 /* Pods-ImHere-ImHereUITests.debug.xcconfig */,
@@ -192,7 +180,7 @@
 		809ABCC6254F62140006552C /* ImHereUITests */ = {
 			isa = PBXGroup;
 			children = (
-				809ABCC7254F62140006552C /* I_m_HereUITests.swift */,
+				809ABCC7254F62140006552C /* ImHereUITests.swift */,
 				809ABCC9254F62140006552C /* Info.plist */,
 			);
 			path = ImHereUITests;
@@ -540,7 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				809ABCC8254F62140006552C /* I_m_HereUITests.swift in Sources */,
+				809ABCC8254F62140006552C /* ImHereUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
