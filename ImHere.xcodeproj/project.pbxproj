@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74E7AA5EF0C1D70A2ED41F47 /* Pods_ImHereTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025F05D971622C3C55DBB2D0 /* Pods_ImHereTests.framework */; };
+		7C98BFB95ADB01A2F2540318 /* Pods_ImHere_ImHereUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BE1C30D51DCCDF56D9757D /* Pods_ImHere_ImHereUITests.framework */; };
 		804F664D25552D56009039C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804F664C25552D56009039C2 /* Main.storyboard */; };
+		804F66B72555442C009039C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 804F66B62555442C009039C2 /* GoogleService-Info.plist */; };
 		807AA9F525535DFC0011C972 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807AA9F425535DFC0011C972 /* SceneDelegate.swift */; };
 		809ABCA6254F62130006552C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCA5254F62130006552C /* AppDelegate.swift */; };
 		809ABCAA254F62130006552C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCA9254F62130006552C /* ViewController.swift */; };
@@ -24,6 +27,7 @@
 		809ABCF4254F64B30006552C /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCED254F64B30006552C /* InputContainerView.swift */; };
 		809ABCF5254F64B30006552C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 809ABCEE254F64B30006552C /* README.md */; };
 		809ABCF6254F64B30006552C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCEF254F64B30006552C /* LoginController.swift */; };
+		AE65445F0D5A4D4D010EFC62 /* Pods_ImHere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891EF3379E08589882E474C5 /* Pods_ImHere.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,18 +48,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		025F05D971622C3C55DBB2D0 /* Pods_ImHereTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImHereTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AA79BC92BDD0D8F7C79E1D9 /* Pods-I'm Here-I'm HereUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm Here-I'm HereUITests.debug.xcconfig"; path = "Target Support Files/Pods-I'm Here-I'm HereUITests/Pods-I'm Here-I'm HereUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5863B3306EBEB59E7ECD0D03 /* Pods-ImHereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHereTests.debug.xcconfig"; path = "Target Support Files/Pods-ImHereTests/Pods-ImHereTests.debug.xcconfig"; sourceTree = "<group>"; };
+		58C2D4F207C91DD1D3079968 /* Pods-I'm Here-I'm HereUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm Here-I'm HereUITests.release.xcconfig"; path = "Target Support Files/Pods-I'm Here-I'm HereUITests/Pods-I'm Here-I'm HereUITests.release.xcconfig"; sourceTree = "<group>"; };
+		642C571446532E47E370D6AB /* Pods-I'm HereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm HereTests.release.xcconfig"; path = "Target Support Files/Pods-I'm HereTests/Pods-I'm HereTests.release.xcconfig"; sourceTree = "<group>"; };
+		7FF1D8B9DABF1FD285D33E62 /* Pods-I'm Here.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm Here.release.xcconfig"; path = "Target Support Files/Pods-I'm Here/Pods-I'm Here.release.xcconfig"; sourceTree = "<group>"; };
 		804F664C25552D56009039C2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		804F66B62555442C009039C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		807AA9F425535DFC0011C972 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		809ABCA2254F62130006552C /* I'm Here.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I'm Here.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		809ABCA2254F62130006552C /* ImHere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImHere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809ABCA5254F62130006552C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		809ABCA9254F62130006552C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		809ABCAE254F62140006552C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		809ABCB1254F62140006552C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		809ABCB3254F62140006552C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		809ABCB8254F62140006552C /* I'm HereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "I'm HereTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		809ABCB8254F62140006552C /* ImHereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImHereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		809ABCBC254F62140006552C /* I_m_HereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_m_HereTests.swift; sourceTree = "<group>"; };
 		809ABCBE254F62140006552C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		809ABCC3254F62140006552C /* I'm HereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "I'm HereUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		809ABCC3254F62140006552C /* ImHereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImHereUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		809ABCC7254F62140006552C /* I_m_HereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_m_HereUITests.swift; sourceTree = "<group>"; };
 		809ABCC9254F62140006552C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		809ABCE0254F64A10006552C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -67,6 +78,15 @@
 		809ABCED254F64B30006552C /* InputContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
 		809ABCEE254F64B30006552C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		809ABCEF254F64B30006552C /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		891EF3379E08589882E474C5 /* Pods_ImHere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImHere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8950C33342A99901D78C85C8 /* Pods-ImHere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHere.debug.xcconfig"; path = "Target Support Files/Pods-ImHere/Pods-ImHere.debug.xcconfig"; sourceTree = "<group>"; };
+		8FF735BDA5CCD17B937F0436 /* Pods-I'm HereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm HereTests.debug.xcconfig"; path = "Target Support Files/Pods-I'm HereTests/Pods-I'm HereTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C94DF6F767262AC482816F1 /* Pods-ImHere-ImHereUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHere-ImHereUITests.release.xcconfig"; path = "Target Support Files/Pods-ImHere-ImHereUITests/Pods-ImHere-ImHereUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A6075DE47DBEAC133327A4C6 /* Pods-ImHere-ImHereUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHere-ImHereUITests.debug.xcconfig"; path = "Target Support Files/Pods-ImHere-ImHereUITests/Pods-ImHere-ImHereUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6BE1C30D51DCCDF56D9757D /* Pods_ImHere_ImHereUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImHere_ImHereUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8BC3FBBC2E0082CB62DB623 /* Pods-ImHere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHere.release.xcconfig"; path = "Target Support Files/Pods-ImHere/Pods-ImHere.release.xcconfig"; sourceTree = "<group>"; };
+		E0868FC535B2D9E05D03605A /* Pods-I'm Here.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm Here.debug.xcconfig"; path = "Target Support Files/Pods-I'm Here/Pods-I'm Here.debug.xcconfig"; sourceTree = "<group>"; };
+		EC945917278F314990777A2F /* Pods-ImHereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHereTests.release.xcconfig"; path = "Target Support Files/Pods-ImHereTests/Pods-ImHereTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE65445F0D5A4D4D010EFC62 /* Pods_ImHere.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E7AA5EF0C1D70A2ED41F47 /* Pods_ImHereTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,34 +110,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C98BFB95ADB01A2F2540318 /* Pods_ImHere_ImHereUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AC843E91483BA38B6106ADA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0868FC535B2D9E05D03605A /* Pods-I'm Here.debug.xcconfig */,
+				7FF1D8B9DABF1FD285D33E62 /* Pods-I'm Here.release.xcconfig */,
+				1AA79BC92BDD0D8F7C79E1D9 /* Pods-I'm Here-I'm HereUITests.debug.xcconfig */,
+				58C2D4F207C91DD1D3079968 /* Pods-I'm Here-I'm HereUITests.release.xcconfig */,
+				8FF735BDA5CCD17B937F0436 /* Pods-I'm HereTests.debug.xcconfig */,
+				642C571446532E47E370D6AB /* Pods-I'm HereTests.release.xcconfig */,
+				8950C33342A99901D78C85C8 /* Pods-ImHere.debug.xcconfig */,
+				B8BC3FBBC2E0082CB62DB623 /* Pods-ImHere.release.xcconfig */,
+				A6075DE47DBEAC133327A4C6 /* Pods-ImHere-ImHereUITests.debug.xcconfig */,
+				9C94DF6F767262AC482816F1 /* Pods-ImHere-ImHereUITests.release.xcconfig */,
+				5863B3306EBEB59E7ECD0D03 /* Pods-ImHereTests.debug.xcconfig */,
+				EC945917278F314990777A2F /* Pods-ImHereTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		809ABC99254F62130006552C = {
 			isa = PBXGroup;
 			children = (
 				809ABCEE254F64B30006552C /* README.md */,
-				809ABCA4254F62130006552C /* I'm Here */,
-				809ABCBB254F62140006552C /* I'm HereTests */,
-				809ABCC6254F62140006552C /* I'm HereUITests */,
+				809ABCA4254F62130006552C /* ImHere */,
+				809ABCBB254F62140006552C /* ImHereTests */,
+				809ABCC6254F62140006552C /* ImHereUITests */,
 				809ABCA3254F62130006552C /* Products */,
+				0AC843E91483BA38B6106ADA /* Pods */,
+				89213A32F11C5A345080B9DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		809ABCA3254F62130006552C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				809ABCA2254F62130006552C /* I'm Here.app */,
-				809ABCB8254F62140006552C /* I'm HereTests.xctest */,
-				809ABCC3254F62140006552C /* I'm HereUITests.xctest */,
+				809ABCA2254F62130006552C /* ImHere.app */,
+				809ABCB8254F62140006552C /* ImHereTests.xctest */,
+				809ABCC3254F62140006552C /* ImHereUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		809ABCA4254F62130006552C /* I'm Here */ = {
+		809ABCA4254F62130006552C /* ImHere */ = {
 			isa = PBXGroup;
 			children = (
 				809ABCDE254F63490006552C /* Utilities */,
@@ -130,27 +174,28 @@
 				804F664C25552D56009039C2 /* Main.storyboard */,
 				809ABCAE254F62140006552C /* Assets.xcassets */,
 				809ABCB0254F62140006552C /* LaunchScreen.storyboard */,
+				804F66B62555442C009039C2 /* GoogleService-Info.plist */,
 				809ABCB3254F62140006552C /* Info.plist */,
 			);
-			path = "I'm Here";
+			path = ImHere;
 			sourceTree = "<group>";
 		};
-		809ABCBB254F62140006552C /* I'm HereTests */ = {
+		809ABCBB254F62140006552C /* ImHereTests */ = {
 			isa = PBXGroup;
 			children = (
 				809ABCBC254F62140006552C /* I_m_HereTests.swift */,
 				809ABCBE254F62140006552C /* Info.plist */,
 			);
-			path = "I'm HereTests";
+			path = ImHereTests;
 			sourceTree = "<group>";
 		};
-		809ABCC6254F62140006552C /* I'm HereUITests */ = {
+		809ABCC6254F62140006552C /* ImHereUITests */ = {
 			isa = PBXGroup;
 			children = (
 				809ABCC7254F62140006552C /* I_m_HereUITests.swift */,
 				809ABCC9254F62140006552C /* Info.plist */,
 			);
-			path = "I'm HereUITests";
+			path = ImHereUITests;
 			sourceTree = "<group>";
 		};
 		809ABCD8254F62B90006552C /* Models */ = {
@@ -219,30 +264,43 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		89213A32F11C5A345080B9DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				891EF3379E08589882E474C5 /* Pods_ImHere.framework */,
+				A6BE1C30D51DCCDF56D9757D /* Pods_ImHere_ImHereUITests.framework */,
+				025F05D971622C3C55DBB2D0 /* Pods_ImHereTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		809ABCA1254F62130006552C /* I'm Here */ = {
+		809ABCA1254F62130006552C /* ImHere */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 809ABCCC254F62140006552C /* Build configuration list for PBXNativeTarget "I'm Here" */;
+			buildConfigurationList = 809ABCCC254F62140006552C /* Build configuration list for PBXNativeTarget "ImHere" */;
 			buildPhases = (
+				2B5F335B888A913C2963FA19 /* [CP] Check Pods Manifest.lock */,
 				809ABC9E254F62130006552C /* Sources */,
 				809ABC9F254F62130006552C /* Frameworks */,
 				809ABCA0254F62130006552C /* Resources */,
+				EDE4CB3934948975B05BD11D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "I'm Here";
+			name = ImHere;
 			productName = "I'm Here";
-			productReference = 809ABCA2254F62130006552C /* I'm Here.app */;
+			productReference = 809ABCA2254F62130006552C /* ImHere.app */;
 			productType = "com.apple.product-type.application";
 		};
-		809ABCB7254F62140006552C /* I'm HereTests */ = {
+		809ABCB7254F62140006552C /* ImHereTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 809ABCCF254F62140006552C /* Build configuration list for PBXNativeTarget "I'm HereTests" */;
+			buildConfigurationList = 809ABCCF254F62140006552C /* Build configuration list for PBXNativeTarget "ImHereTests" */;
 			buildPhases = (
+				421BF7C6FFDBB927DA26AD07 /* [CP] Check Pods Manifest.lock */,
 				809ABCB4254F62140006552C /* Sources */,
 				809ABCB5254F62140006552C /* Frameworks */,
 				809ABCB6254F62140006552C /* Resources */,
@@ -252,27 +310,29 @@
 			dependencies = (
 				809ABCBA254F62140006552C /* PBXTargetDependency */,
 			);
-			name = "I'm HereTests";
+			name = ImHereTests;
 			productName = "I'm HereTests";
-			productReference = 809ABCB8254F62140006552C /* I'm HereTests.xctest */;
+			productReference = 809ABCB8254F62140006552C /* ImHereTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		809ABCC2254F62140006552C /* I'm HereUITests */ = {
+		809ABCC2254F62140006552C /* ImHereUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 809ABCD2254F62140006552C /* Build configuration list for PBXNativeTarget "I'm HereUITests" */;
+			buildConfigurationList = 809ABCD2254F62140006552C /* Build configuration list for PBXNativeTarget "ImHereUITests" */;
 			buildPhases = (
+				7D2E575C013790D0ED2A4A8D /* [CP] Check Pods Manifest.lock */,
 				809ABCBF254F62140006552C /* Sources */,
 				809ABCC0254F62140006552C /* Frameworks */,
 				809ABCC1254F62140006552C /* Resources */,
+				E09909F317ECB69B809B4742 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				809ABCC5254F62140006552C /* PBXTargetDependency */,
 			);
-			name = "I'm HereUITests";
+			name = ImHereUITests;
 			productName = "I'm HereUITests";
-			productReference = 809ABCC3254F62140006552C /* I'm HereUITests.xctest */;
+			productReference = 809ABCC3254F62140006552C /* ImHereUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -297,7 +357,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 809ABC9D254F62130006552C /* Build configuration list for PBXProject "I'm Here" */;
+			buildConfigurationList = 809ABC9D254F62130006552C /* Build configuration list for PBXProject "ImHere" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -310,9 +370,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				809ABCA1254F62130006552C /* I'm Here */,
-				809ABCB7254F62140006552C /* I'm HereTests */,
-				809ABCC2254F62140006552C /* I'm HereUITests */,
+				809ABCA1254F62130006552C /* ImHere */,
+				809ABCB7254F62140006552C /* ImHereTests */,
+				809ABCC2254F62140006552C /* ImHereUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -324,6 +384,7 @@
 			files = (
 				809ABCB2254F62140006552C /* LaunchScreen.storyboard in Resources */,
 				804F664D25552D56009039C2 /* Main.storyboard in Resources */,
+				804F66B72555442C009039C2 /* GoogleService-Info.plist in Resources */,
 				809ABCAF254F62140006552C /* Assets.xcassets in Resources */,
 				809ABCF5254F64B30006552C /* README.md in Resources */,
 			);
@@ -344,6 +405,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B5F335B888A913C2963FA19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImHere-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		421BF7C6FFDBB927DA26AD07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImHereTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D2E575C013790D0ED2A4A8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImHere-ImHereUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E09909F317ECB69B809B4742 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImHere-ImHereUITests/Pods-ImHere-ImHereUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImHere-ImHereUITests/Pods-ImHere-ImHereUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImHere-ImHereUITests/Pods-ImHere-ImHereUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDE4CB3934948975B05BD11D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImHere/Pods-ImHere-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImHere/Pods-ImHere-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImHere/Pods-ImHere-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		809ABC9E254F62130006552C /* Sources */ = {
@@ -385,12 +549,12 @@
 /* Begin PBXTargetDependency section */
 		809ABCBA254F62140006552C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 809ABCA1254F62130006552C /* I'm Here */;
+			target = 809ABCA1254F62130006552C /* ImHere */;
 			targetProxy = 809ABCB9254F62140006552C /* PBXContainerItemProxy */;
 		};
 		809ABCC5254F62140006552C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 809ABCA1254F62130006552C /* I'm Here */;
+			target = 809ABCA1254F62130006552C /* ImHere */;
 			targetProxy = 809ABCC4254F62140006552C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -525,16 +689,31 @@
 		};
 		809ABCCD254F62140006552C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8950C33342A99901D78C85C8 /* Pods-ImHere.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "I'm Here/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreDiagnostics\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseDatabase\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseStorage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransport\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb\"",
+				);
+				INFOPLIST_FILE = ImHere/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.I-m-Here";
+				PRODUCT_BUNDLE_IDENTIFIER = Codepath.ImHere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -543,16 +722,31 @@
 		};
 		809ABCCE254F62140006552C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8BC3FBBC2E0082CB62DB623 /* Pods-ImHere.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "I'm Here/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreDiagnostics\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseDatabase\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseStorage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransport\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb\"",
+				);
+				INFOPLIST_FILE = ImHere/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.I-m-Here";
+				PRODUCT_BUNDLE_IDENTIFIER = Codepath.ImHere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -561,6 +755,7 @@
 		};
 		809ABCD0254F62140006552C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5863B3306EBEB59E7ECD0D03 /* Pods-ImHereTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -576,12 +771,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/I'm Here.app/I'm Here";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImHere.app/ImHere";
 			};
 			name = Debug;
 		};
 		809ABCD1254F62140006552C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC945917278F314990777A2F /* Pods-ImHereTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -597,12 +793,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/I'm Here.app/I'm Here";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImHere.app/ImHere";
 			};
 			name = Release;
 		};
 		809ABCD3254F62140006552C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6075DE47DBEAC133327A4C6 /* Pods-ImHere-ImHereUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -622,6 +819,7 @@
 		};
 		809ABCD4254F62140006552C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C94DF6F767262AC482816F1 /* Pods-ImHere-ImHereUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -642,7 +840,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		809ABC9D254F62130006552C /* Build configuration list for PBXProject "I'm Here" */ = {
+		809ABC9D254F62130006552C /* Build configuration list for PBXProject "ImHere" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				809ABCCA254F62140006552C /* Debug */,
@@ -651,7 +849,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		809ABCCC254F62140006552C /* Build configuration list for PBXNativeTarget "I'm Here" */ = {
+		809ABCCC254F62140006552C /* Build configuration list for PBXNativeTarget "ImHere" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				809ABCCD254F62140006552C /* Debug */,
@@ -660,7 +858,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		809ABCCF254F62140006552C /* Build configuration list for PBXNativeTarget "I'm HereTests" */ = {
+		809ABCCF254F62140006552C /* Build configuration list for PBXNativeTarget "ImHereTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				809ABCD0254F62140006552C /* Debug */,
@@ -669,7 +867,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		809ABCD2254F62140006552C /* Build configuration list for PBXNativeTarget "I'm HereUITests" */ = {
+		809ABCD2254F62140006552C /* Build configuration list for PBXNativeTarget "ImHereUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				809ABCD3254F62140006552C /* Debug */,
