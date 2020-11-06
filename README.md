@@ -209,7 +209,7 @@ Send I’m Here notification
 
 ### Login/Sign-up Page
 
-<img src="http://g.recordit.co/qemF3otHVa.gif" width=600>
+<img src="http://g.recordit.co/qemF3otHVa.gif" width=200>
 
 
 
