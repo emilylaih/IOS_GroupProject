@@ -19,9 +19,20 @@ class LoginController: UIViewController {
     
     private let iconImage: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(systemName: "bubble.right")
+        iv.image = UIImage(systemName: "mappin.and.ellipse")
         iv.tintColor = .white
         return iv
+    }()
+    
+    private let label: UILabel = {
+        let label = UILabel()
+        label.frame = CGRect(x: 150, y: 150, width: 100, height: 20)
+        label.font = UIFont(name: "Gill Sans Bold", size: 40)
+        label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.text = "I'm Here"
+        return label
     }()
     
     private lazy var emailContainerView: UIView = {
@@ -108,13 +119,17 @@ class LoginController: UIViewController {
         iconImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         iconImage.setDimensions(height: 120, width: 120)
         
+        view.addSubview(label)
+        label.anchor(top: iconImage.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 32, paddingRight: 32)
+        self.view = view
+        
         let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, loginButton])
         
         stack.axis = .vertical
         stack.spacing = 16
         
         view.addSubview(stack)
-        stack.anchor(top: iconImage.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 32, paddingLeft: 32, paddingRight: 32)
+        stack.anchor(top: label.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 120, paddingLeft: 32, paddingRight: 32)
         
         view.addSubview(dontHaveAccountButton)
         dontHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
