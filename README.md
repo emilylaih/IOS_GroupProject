@@ -207,3 +207,9 @@ Get the map’s pin location
 Display other members’ locations
 Send I’m Here notification
 
+### Login/Sign-up Page
+
+<img src="http://g.recordit.co/qemF3otHVa.gif" width=600>
+
+
+
