@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Lobby View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImHere" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LobbyViewController" id="BYZ-38-t0r" customClass="LobbyViewController" customModule="ImHere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,6 +20,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="plus_photo" translatesAutoresizingMaskIntoConstraints="NO" id="86a-AD-vpM">
                                 <rect key="frame" x="40" y="72" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Y5D-TK-9RB" appends="YES" id="dr0-eQ-Ewp"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWr-9E-6kz">
                                 <rect key="frame" x="40" y="192" width="202" height="49"/>
@@ -28,6 +33,9 @@
                                 <state key="normal" title="New Group">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="NewGroupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="km7-Xd-Tgs"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="ic_mail_outline_white_2x" translatesAutoresizingMaskIntoConstraints="NO" id="yHF-u7-jPI">
                                 <rect key="frame" x="295" y="192" width="88" height="49"/>
@@ -88,16 +96,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="icons8-settings" translatesAutoresizingMaskIntoConstraints="NO" id="Kra-C6-7dp">
-                                <rect key="frame" x="344" y="73" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9d-DC-fj4">
+                                <rect key="frame" x="340" y="66" width="43" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="icons8-settings" symbolScale="default"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vv4-em-9Nm" kind="presentation" id="IDM-kZ-jYp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <gestureRecognizers/>
                     </view>
+                    <connections>
+                        <outlet property="profilePicture" destination="86a-AD-vpM" id="gFg-LQ-YAh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Y5D-TK-9RB">
+                    <connections>
+                        <action selector="onCameraButton:" destination="BYZ-38-t0r" id="NRY-zn-aA8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="11.594202898550726" y="73.660714285714278"/>
         </scene>
@@ -127,7 +151,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvh-pH-pfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="698.55072463768124" y="73.660714285714278"/>
+            <point key="canvasLocation" x="1607" y="74"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="r0F-MJ-X6N">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="vv4-em-9Nm" customClass="SettingsViewController" customModule="ImHere" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UdX-vT-u7Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqK-LH-7JY">
+                                <rect key="frame" x="141" y="727" width="130" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLogoutButton:" destination="vv4-em-9Nm" eventType="touchUpInside" id="WV5-rs-of3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uoj-7f-t6h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6i-MP-B7W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786" y="74"/>
         </scene>
     </scenes>
     <resources>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 protocol AuthenticationControllerProtocol {
     func checkFormStatus()
@@ -86,8 +87,32 @@ class LoginController: UIViewController {
     
     @objc func handleLogin()
     {
-        print("DEBUG: Handle login here...")
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print("DEBUG: Failed to login \(error.localizedDescription)")
+                return
+            }
+            
+            // once logged in the screen will change from login to lobby page
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let LobbyViewController = main.instantiateViewController(withIdentifier: "LobbyViewController")
+            let scene = UIApplication.shared.connectedScenes.first
+            if let delegate : SceneDelegate = (scene?.delegate as? SceneDelegate) {
+                delegate.window?.rootViewController = LobbyViewController
+            }
+
+
+            print("DEBUG: User login successful...")
+        }
+       
+        
+        
     }
+    
+
+    
     
     @objc func handleShowSignUp() {
         let controller = RegistrationController()

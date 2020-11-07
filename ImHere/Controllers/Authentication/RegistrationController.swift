@@ -127,6 +127,8 @@ class RegistrationController: UIViewController {
                             print("DEBUG: Failed to upload user data with error \(error.localizedDescription)")
                             return
                         }
+                        self.dismiss(animated: true, completion: nil)
+
                         print("DEBUG: Did create user..")
                     }
                 }

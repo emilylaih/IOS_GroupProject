@@ -11,16 +11,35 @@ import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    // added
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        authenticateUser()
         
+           
         return true
     }
 
+    func authenticateUser(){
+        if Auth.auth().currentUser?.uid == nil{
+            
+            let controller = LoginController()
+            let nav = UINavigationController(rootViewController: controller)
+
+            print("DEBUG: user is not logged in. Present login screen here")
+        
+        } else {
+            print("DEBUG: user is logged in")
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let LobbyViewController = main.instantiateViewController(withIdentifier: "LobbyViewController")
+        }
+
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
