@@ -6,19 +6,21 @@
 //
 
 import UIKit
+import Firebase
 
 class RegistrationController: UIViewController {
     
     //Properties
     
     private var viewModel = RegistrationViewModel()
+    private var profileImage: UIImage?
     
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
         button.tintColor = .white
         button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside)
-        button.imageView?.clipsToBounds = true
+        button.imageView?.contentMode = .scaleAspectFill
         button.clipsToBounds = true
         
         return button
@@ -81,6 +83,54 @@ class RegistrationController: UIViewController {
     }
     
     //Selectors
+    
+    @objc func handleRegistration() {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        guard let fullname = fullnameTextField.text else { return }
+        guard let username = usernameTextField.text?.lowercased() else { return }
+        guard let profileImage = profileImage else { return }
+        
+        guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
+        
+        let filename = NSUUID().uuidString
+        let ref = Storage.storage().reference(withPath: "/profile_images/\(filename)")
+        
+        ref.putData(imageData, metadata: nil) { (meta, error) in
+            if let error = error {
+                print("DEBUG: Failed to upload image with error \(error.localizedDescription)")
+                return
+            }
+            
+            ref.downloadURL { (url, error) in
+                guard let profileImageUrl = url?.absoluteString else { return }
+                
+                
+                Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+                    if let error = error {
+                        print("DEBUG: Failed to create user with error \(error.localizedDescription)")
+                        return
+                    }
+                
+                guard let uid = result?.user.uid else { return }
+                
+                let data = ["email": email,
+                            "fullname": fullname,
+                            "profileImageUrl": profileImageUrl,
+                            "uid": uid,
+                            "username": username] as [String : Any]
+                    
+                    Firestore.firestore().collection("users").document(uid).setData(data) { error in
+                        if let error = error {
+                            print("DEBUG: Failed to upload user data with error \(error.localizedDescription)")
+                            return
+                        }
+                        print("DEBUG: Did create user..")
+                    }
+                }
+            }
+        }
+    }
     
     @objc func textDidChange(sender: UITextField) {
         if sender == emailTextField {
@@ -146,6 +196,7 @@ class RegistrationController: UIViewController {
 extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as? UIImage
+        profileImage = image
         plusPhotoButton.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
         plusPhotoButton.layer.borderColor = UIColor.white.cgColor
         plusPhotoButton.layer.borderWidth = 3.0

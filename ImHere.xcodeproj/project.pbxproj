@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3ED9F71525562541001F1558 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ED9F71425562541001F1558 /* GoogleService-Info.plist */; };
 		74E7AA5EF0C1D70A2ED41F47 /* Pods_ImHereTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025F05D971622C3C55DBB2D0 /* Pods_ImHereTests.framework */; };
 		7C98BFB95ADB01A2F2540318 /* Pods_ImHere_ImHereUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BE1C30D51DCCDF56D9757D /* Pods_ImHere_ImHereUITests.framework */; };
 		804F664D25552D56009039C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804F664C25552D56009039C2 /* Main.storyboard */; };
-		804F66B72555442C009039C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 804F66B62555442C009039C2 /* GoogleService-Info.plist */; };
 		807AA9F525535DFC0011C972 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807AA9F425535DFC0011C972 /* SceneDelegate.swift */; };
 		809ABCA6254F62130006552C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCA5254F62130006552C /* AppDelegate.swift */; };
 		809ABCAA254F62130006552C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCA9254F62130006552C /* ViewController.swift */; };
@@ -49,9 +49,9 @@
 
 /* Begin PBXFileReference section */
 		025F05D971622C3C55DBB2D0 /* Pods_ImHereTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImHereTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ED9F71425562541001F1558 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5863B3306EBEB59E7ECD0D03 /* Pods-ImHereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHereTests.debug.xcconfig"; path = "Target Support Files/Pods-ImHereTests/Pods-ImHereTests.debug.xcconfig"; sourceTree = "<group>"; };
 		804F664C25552D56009039C2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		804F66B62555442C009039C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		807AA9F425535DFC0011C972 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		809ABCA2254F62130006552C /* ImHere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImHere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809ABCA5254F62130006552C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +150,7 @@
 		809ABCA4254F62130006552C /* ImHere */ = {
 			isa = PBXGroup;
 			children = (
+				3ED9F71425562541001F1558 /* GoogleService-Info.plist */,
 				809ABCDE254F63490006552C /* Utilities */,
 				809ABCDD254F63440006552C /* API */,
 				809ABCDB254F62F80006552C /* Controllers */,
@@ -162,7 +163,6 @@
 				804F664C25552D56009039C2 /* Main.storyboard */,
 				809ABCAE254F62140006552C /* Assets.xcassets */,
 				809ABCB0254F62140006552C /* LaunchScreen.storyboard */,
-				804F66B62555442C009039C2 /* GoogleService-Info.plist */,
 				809ABCB3254F62140006552C /* Info.plist */,
 			);
 			path = ImHere;
@@ -372,7 +372,7 @@
 			files = (
 				809ABCB2254F62140006552C /* LaunchScreen.storyboard in Resources */,
 				804F664D25552D56009039C2 /* Main.storyboard in Resources */,
-				804F66B72555442C009039C2 /* GoogleService-Info.plist in Resources */,
+				3ED9F71525562541001F1558 /* GoogleService-Info.plist in Resources */,
 				809ABCAF254F62140006552C /* Assets.xcassets in Resources */,
 				809ABCF5254F64B30006552C /* README.md in Resources */,
 			);

@@ -21,8 +21,6 @@ class ConversationsController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        
-        
     }
     
     //Selectors
