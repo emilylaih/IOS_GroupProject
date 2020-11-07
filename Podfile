@@ -6,14 +6,13 @@ target 'ImHere' do
   use_frameworks!
 
   # Pods for ImHere
-	pod "Firebase"
-	pod "Firebase/Core"
-	pod 'Firebase/Database'
-	pod 'Firebase/Auth'
-	pod 'Firebase/Storage'
-	pod "Firebase/Firestore"
-	pod 'SDWebImage','~>4.4.2'
-        pod 'JGProgressHUD','~>2.0.3'
+  pod "Firebase"
+      pod "Firebase/Core"
+      pod "Firebase/Storage"
+      pod "FirebaseAuth"
+      pod "Firebase/Firestore"
+      pod 'SDWebImage','~>4.4.2'
+      pod 'JGProgressHUD','~>2.0.3'
 
   target 'ImHereTests' do
     inherit! :search_paths

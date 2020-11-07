@@ -61,6 +61,8 @@ class RegistrationController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.setHeight(height: 50)
         button.isEnabled = false
+        button.addTarget(self, action: #selector(handleRegistration), for: .touchUpInside)
+
         return button
     }()
     
