@@ -209,7 +209,9 @@ Send I’m Here notification
 
 ### Login/Sign-up Page
 
-<img src="http://g.recordit.co/qemF3otHVa.gif" width=200>
+<img src="http://g.recordit.co/a3DNUio9Jj.gif" width=200>
+<img src="http://g.recordit.co/5F5jjQeVda.gif" width=200>
+
 
 
 
