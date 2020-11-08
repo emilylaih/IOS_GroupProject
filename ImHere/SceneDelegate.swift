@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -14,12 +14,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        guard let scene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: scene)
-        let nav = UINavigationController(rootViewController: LoginController())
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
+       guard let scene = (scene as? UIWindowScene) else { return }
+         window = UIWindow(windowScene: scene as! UIWindowScene)
+
+        
+        
+        // if the user is logged in, it will take the user to the lobby page
+        if Auth.auth().currentUser?.uid != nil{
+        let main = UIStoryboard(name: "Main", bundle: nil)
+            
+        //Get an instance of FeedNavigationController
+        let LobbyViewController = main.instantiateViewController(withIdentifier: "LobbyViewController")
+        
+            window?.rootViewController = LobbyViewController
+
+            
+        }
+        // if the user is not logged in, it will take the user to the login page
+        else{
+            let controller = LoginController()
+            let nav = UINavigationController(rootViewController: controller)
+               window?.rootViewController = nav
+
+                    window?.makeKeyAndVisible()
+            
+        }
+
+
     }
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

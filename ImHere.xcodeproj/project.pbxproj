@@ -28,6 +28,8 @@
 		809ABCF5254F64B30006552C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 809ABCEE254F64B30006552C /* README.md */; };
 		809ABCF6254F64B30006552C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCEF254F64B30006552C /* LoginController.swift */; };
 		AE65445F0D5A4D4D010EFC62 /* Pods_ImHere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891EF3379E08589882E474C5 /* Pods_ImHere.framework */; };
+		F09B429A255674F300FDFD3D /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B4299255674F300FDFD3D /* LobbyViewController.swift */; };
+		F09B42A82556899B00FDFD3D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B42A72556899B00FDFD3D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		A6BE1C30D51DCCDF56D9757D /* Pods_ImHere_ImHereUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImHere_ImHereUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BC3FBBC2E0082CB62DB623 /* Pods-ImHere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHere.release.xcconfig"; path = "Target Support Files/Pods-ImHere/Pods-ImHere.release.xcconfig"; sourceTree = "<group>"; };
 		EC945917278F314990777A2F /* Pods-ImHereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHereTests.release.xcconfig"; path = "Target Support Files/Pods-ImHereTests/Pods-ImHereTests.release.xcconfig"; sourceTree = "<group>"; };
+		F09B4299255674F300FDFD3D /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
+		F09B42A72556899B00FDFD3D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				809ABCE1254F64A10006552C /* ConversationsController.swift */,
+				F09B4299255674F300FDFD3D /* LobbyViewController.swift */,
+				F09B42A72556899B00FDFD3D /* SettingsViewController.swift */,
 				809ABCDC254F631D0006552C /* Authentication */,
 			);
 			path = Controllers;
@@ -505,12 +511,14 @@
 				809ABCF0254F64B30006552C /* RegistrationController.swift in Sources */,
 				809ABCF6254F64B30006552C /* LoginController.swift in Sources */,
 				809ABCAA254F62130006552C /* ViewController.swift in Sources */,
+				F09B429A255674F300FDFD3D /* LobbyViewController.swift in Sources */,
 				809ABCA6254F62130006552C /* AppDelegate.swift in Sources */,
 				809ABCE5254F64A10006552C /* CustomTextField.swift in Sources */,
 				809ABCF4254F64B30006552C /* InputContainerView.swift in Sources */,
 				809ABCE4254F64A10006552C /* ConversationsController.swift in Sources */,
 				807AA9F525535DFC0011C972 /* SceneDelegate.swift in Sources */,
 				809ABCF1254F64B30006552C /* RegistrationViewModel.swift in Sources */,
+				F09B42A82556899B00FDFD3D /* SettingsViewController.swift in Sources */,
 				809ABCF3254F64B30006552C /* LoginViewModel.swift in Sources */,
 				809ABCE3254F64A10006552C /* Extensions.swift in Sources */,
 			);

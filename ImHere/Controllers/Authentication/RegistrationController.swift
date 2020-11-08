@@ -127,6 +127,14 @@ class RegistrationController: UIViewController {
                             print("DEBUG: Failed to upload user data with error \(error.localizedDescription)")
                             return
                         }
+                        
+                        // once registered, the screen will change from registered to the lobby page
+                        let main = UIStoryboard(name: "Main", bundle: nil)
+                        let LobbyViewController = main.instantiateViewController(withIdentifier: "LobbyViewController")
+                        let scene = UIApplication.shared.connectedScenes.first
+                        if let delegate : SceneDelegate = (scene?.delegate as? SceneDelegate) {
+                            delegate.window?.rootViewController = LobbyViewController
+                        }
                         print("DEBUG: Did create user..")
                     }
                 }
