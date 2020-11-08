@@ -15,6 +15,9 @@
 		8036EF46255808CB00C62050 /* GroupMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8036EF45255808CB00C62050 /* GroupMembersViewController.swift */; };
 		8036EF882558296B00C62050 /* InvitationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8036EF872558296B00C62050 /* InvitationsViewController.swift */; };
 		8036EF8D255829A300C62050 /* CreateNewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8036EF8C255829A300C62050 /* CreateNewGroupViewController.swift */; };
+		8036EFB2255834E000C62050 /* LobbyGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8036EFB1255834E000C62050 /* LobbyGroupCell.swift */; };
+		8036EFB72558352E00C62050 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8036EFB62558352E00C62050 /* MemberCell.swift */; };
+		8036EFBC2558357C00C62050 /* InvitationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8036EFBB2558357C00C62050 /* InvitationCell.swift */; };
 		804F664D25552D56009039C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804F664C25552D56009039C2 /* Main.storyboard */; };
 		807AA9F525535DFC0011C972 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807AA9F425535DFC0011C972 /* SceneDelegate.swift */; };
 		809ABCA6254F62130006552C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCA5254F62130006552C /* AppDelegate.swift */; };
@@ -63,6 +66,9 @@
 		8036EF45255808CB00C62050 /* GroupMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMembersViewController.swift; sourceTree = "<group>"; };
 		8036EF872558296B00C62050 /* InvitationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationsViewController.swift; sourceTree = "<group>"; };
 		8036EF8C255829A300C62050 /* CreateNewGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewGroupViewController.swift; sourceTree = "<group>"; };
+		8036EFB1255834E000C62050 /* LobbyGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyGroupCell.swift; sourceTree = "<group>"; };
+		8036EFB62558352E00C62050 /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
+		8036EFBB2558357C00C62050 /* InvitationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationCell.swift; sourceTree = "<group>"; };
 		804F664C25552D56009039C2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		807AA9F425535DFC0011C972 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		809ABCA2254F62130006552C /* ImHere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImHere.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,9 +239,12 @@
 				8036EF3B2557FEFD00C62050 /* GroupChatViewController.swift */,
 				8036EF40255807E500C62050 /* GroupMapViewController.swift */,
 				8036EF45255808CB00C62050 /* GroupMembersViewController.swift */,
-				809ABCDC254F631D0006552C /* Authentication */,
 				8036EF872558296B00C62050 /* InvitationsViewController.swift */,
 				8036EF8C255829A300C62050 /* CreateNewGroupViewController.swift */,
+				809ABCDC254F631D0006552C /* Authentication */,
+				8036EFB1255834E000C62050 /* LobbyGroupCell.swift */,
+				8036EFB62558352E00C62050 /* MemberCell.swift */,
+				8036EFBB2558357C00C62050 /* InvitationCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -527,7 +536,9 @@
 				809ABCF0254F64B30006552C /* RegistrationController.swift in Sources */,
 				809ABCF6254F64B30006552C /* LoginController.swift in Sources */,
 				809ABCAA254F62130006552C /* ViewController.swift in Sources */,
+				8036EFB2255834E000C62050 /* LobbyGroupCell.swift in Sources */,
 				8036EF46255808CB00C62050 /* GroupMembersViewController.swift in Sources */,
+				8036EFBC2558357C00C62050 /* InvitationCell.swift in Sources */,
 				F09B429A255674F300FDFD3D /* LobbyViewController.swift in Sources */,
 				809ABCA6254F62130006552C /* AppDelegate.swift in Sources */,
 				8036EF882558296B00C62050 /* InvitationsViewController.swift in Sources */,
@@ -537,6 +548,7 @@
 				809ABCE4254F64A10006552C /* ConversationsController.swift in Sources */,
 				807AA9F525535DFC0011C972 /* SceneDelegate.swift in Sources */,
 				809ABCF1254F64B30006552C /* RegistrationViewModel.swift in Sources */,
+				8036EFB72558352E00C62050 /* MemberCell.swift in Sources */,
 				F09B42A82556899B00FDFD3D /* SettingsViewController.swift in Sources */,
 				809ABCF3254F64B30006552C /* LoginViewModel.swift in Sources */,
 				8036EF41255807E500C62050 /* GroupMapViewController.swift in Sources */,
