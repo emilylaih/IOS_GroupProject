@@ -576,33 +576,33 @@
         <!--Create New Group-->
         <scene sceneID="Y60-0M-Bb1">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="M7C-x6-6Z1" customClass="CreateNewGroupViewController" customModule="ImHere" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="M7C-x6-6Z1" customClass="CreateNewGroupViewController" customModule="ImHere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b4r-pT-gaU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ju-x8-5eW">
-                                <rect key="frame" x="82" y="216" width="137" height="30"/>
+                                <rect key="frame" x="82" y="351" width="137" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BTf-16-yUm">
-                                <rect key="frame" x="82" y="254" width="250" height="34"/>
+                                <rect key="frame" x="82" y="389" width="250" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maximum 50 people in the group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSh-3I-7dZ">
-                                <rect key="frame" x="82" y="296" width="226" height="18"/>
+                                <rect key="frame" x="82" y="431" width="226" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDg-53-o5C">
-                                <rect key="frame" x="119" y="376" width="165" height="34"/>
+                                <rect key="frame" x="119" y="511" width="165" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.29987394810000001" green="0.61809110639999998" blue="0.92160505059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -614,16 +614,30 @@
                                     <action selector="createNewGroupButton:" destination="M7C-x6-6Z1" eventType="touchUpInside" id="Oe0-Oe-I80"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="plus_photo" translatesAutoresizingMaskIntoConstraints="NO" id="lmF-fo-vCp">
+                                <rect key="frame" x="132" y="168" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7Lt-ou-csr" appends="YES" id="b2k-BD-WYj"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zZ6-p2-4WK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create New Group" id="l3O-rA-WGY"/>
                     <connections>
+                        <outlet property="groupImage" destination="lmF-fo-vCp" id="wH6-Sa-fL1"/>
                         <outlet property="newGroupName" destination="BTf-16-yUm" id="SLg-0G-M5Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JE1-jI-1jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7Lt-ou-csr">
+                    <connections>
+                        <action selector="onCameraButton:" destination="M7C-x6-6Z1" id="pFC-ma-yqt"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3957.971014492754" y="628.79464285714278"/>
         </scene>

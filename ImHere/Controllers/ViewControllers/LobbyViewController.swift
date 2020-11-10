@@ -9,10 +9,13 @@ import UIKit
 import Firebase
 import SDWebImage
 
-class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
+
+    
     
     //properties
     private var users = [User]()
+    var groups = [[String: Any]]()
 
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
@@ -24,12 +27,9 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
         // Do any additional setup after loading the view.
     }
     
-
     
     @IBAction func NewGroupButton(_ sender: Any) {
     }
-    
-
     
     @IBOutlet weak var profilePicture: UIImageView!
     
@@ -77,9 +77,6 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
                 self.profilePic.layer.cornerRadius = self.profilePic.frame.size.height/2
                 self.profilePic.clipsToBounds = true
                 
-                
-                
-                
             }
             
             //print("DEBUG: User id is \(Auth.auth().currentUser!.uid)")
@@ -99,5 +96,18 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
 //        dismiss(animated: true, completion: nil)
 //    }
     
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return groups.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LobbyGroupCell") as! LobbyGroupCell
+        
+        let group = groups[indexPath.row]
+        
+        
+        return cell
+    }
 
 }
