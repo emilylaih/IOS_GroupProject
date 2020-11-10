@@ -576,7 +576,7 @@
         <!--Create New Group-->
         <scene sceneID="Y60-0M-Bb1">
             <objects>
-                <viewController id="M7C-x6-6Z1" customClass="CreateNewGroupViewController" customModule="ImHere" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="M7C-x6-6Z1" customClass="CreateNewGroupViewController" customModule="ImHere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b4r-pT-gaU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -610,12 +610,18 @@
                                 <state key="normal" title="Create">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="createNewGroupButton:" destination="M7C-x6-6Z1" eventType="touchUpInside" id="Oe0-Oe-I80"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zZ6-p2-4WK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create New Group" id="l3O-rA-WGY"/>
+                    <connections>
+                        <outlet property="newGroupName" destination="BTf-16-yUm" id="SLg-0G-M5Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JE1-jI-1jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

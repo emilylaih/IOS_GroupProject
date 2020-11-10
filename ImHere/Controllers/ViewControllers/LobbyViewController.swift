@@ -13,13 +13,14 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
     
     //properties
     private var users = [User]()
+
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
 
     //lifecycle
     override func viewDidLoad() {
-        super.viewDidLoad()
         authenticateUser()
+        super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
@@ -66,7 +67,6 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
                 print("DEBUG: Self User in Lobby  \(users)")
                 
                 self.usernameLabel.text = users[0].username
-                
                 
                 //setting own profile image to UIImageView profilePic
                 guard let url = URL(string: users[0].profileImageUrl) else{ return }

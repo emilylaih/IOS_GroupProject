@@ -228,6 +228,9 @@ PODS:
   - Firebase/Firestore (7.0.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 7.0.0)
+  - Firebase/Messaging (7.0.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 7.0.0)
   - Firebase/Storage (7.0.0):
     - Firebase/CoreOnly
     - FirebaseStorage (~> 7.0.0)
@@ -271,6 +274,18 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/UserDefaults (~> 7.0)
     - PromisesObjC (~> 1.2)
+  - FirebaseInstanceID (7.0.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
+  - FirebaseMessaging (7.0.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstanceID (~> 7.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/Reachability (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
   - FirebaseStorage (7.0.0):
     - FirebaseCore (~> 7.0)
     - GTMSessionFetcher/Core (~> 1.4)
@@ -342,6 +357,7 @@ DEPENDENCIES:
   - Firebase
   - Firebase/Core
   - Firebase/Firestore
+  - Firebase/Messaging
   - Firebase/Storage
   - FirebaseAuth
   - JGProgressHUD (~> 2.0.3)
@@ -358,6 +374,8 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseFirestore
     - FirebaseInstallations
+    - FirebaseInstanceID
+    - FirebaseMessaging
     - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleDataTransport
@@ -381,6 +399,8 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 5f4aa04fdb04923693cc704c7ef9158bdf41a48b
   FirebaseFirestore: 969dd448250bee681d0e2d0af89cbb76ef955bb0
   FirebaseInstallations: c28d4bcbb5c6884d1a39afbc0bd7fc590e31e9b7
+  FirebaseInstanceID: c03b49743725092f7eb9d4b96ff40efadd830426
+  FirebaseMessaging: ecf9e04716b7ff1f1d92debab4d6f0e6bdb490aa
   FirebaseStorage: ea52bc7a1cb540406ed1e1acfc2bf3946621ed34
   GoogleAppMeasurement: 7790ef975d1d463c8614cd949a847e612edf087a
   GoogleDataTransport: 6ce8004a961db1b905740d7be106c61ba7e89c21
@@ -394,6 +414,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
 
-PODFILE CHECKSUM: 9679625589ef80d027cca05ac14af98f65a4cc41
+PODFILE CHECKSUM: b765f8205bc2bb64ec3ea471e6acdf583f6bad51
 
 COCOAPODS: 1.10.0
