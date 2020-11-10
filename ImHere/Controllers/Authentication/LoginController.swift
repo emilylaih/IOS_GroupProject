@@ -103,12 +103,9 @@ class LoginController: UIViewController {
                 delegate.window?.rootViewController = LobbyViewController
             }
 
-
             print("DEBUG: User login successful...")
         }
-       
-        
-        
+    
     }
     
 

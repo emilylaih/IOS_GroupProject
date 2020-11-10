@@ -11,6 +11,7 @@ target 'ImHere' do
       pod "Firebase/Storage"
       pod "FirebaseAuth"
       pod "Firebase/Firestore"
+      pod "Firebase/Messaging"
       pod 'SDWebImage','~>4.4.2'
       pod 'JGProgressHUD','~>2.0.3'
 

@@ -17,13 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="plus_photo" translatesAutoresizingMaskIntoConstraints="NO" id="86a-AD-vpM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="plus_photo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86a-AD-vpM">
                                 <rect key="frame" x="40" y="100" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Y5D-TK-9RB" appends="YES" id="dr0-eQ-Ewp"/>
-                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWr-9E-6kz">
                                 <rect key="frame" x="40" y="192" width="202" height="49"/>
@@ -125,7 +122,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Lobby" id="jCb-CY-0kZ"/>
                     <connections>
-                        <outlet property="profilePicture" destination="86a-AD-vpM" id="gFg-LQ-YAh"/>
+                        <outlet property="profilePic" destination="86a-AD-vpM" id="noS-0h-acl"/>
+                        <outlet property="usernameLabel" destination="G5W-hf-lbm" id="XtX-lS-dZB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -578,7 +576,7 @@
         <!--Create New Group-->
         <scene sceneID="Y60-0M-Bb1">
             <objects>
-                <viewController id="M7C-x6-6Z1" customClass="CreateNewGroupViewController" customModule="ImHere" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="M7C-x6-6Z1" customClass="CreateNewGroupViewController" customModule="ImHere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b4r-pT-gaU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -612,12 +610,18 @@
                                 <state key="normal" title="Create">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="createNewGroupButton:" destination="M7C-x6-6Z1" eventType="touchUpInside" id="Oe0-Oe-I80"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zZ6-p2-4WK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create New Group" id="l3O-rA-WGY"/>
+                    <connections>
+                        <outlet property="newGroupName" destination="BTf-16-yUm" id="SLg-0G-M5Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JE1-jI-1jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
