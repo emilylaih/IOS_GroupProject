@@ -20,6 +20,7 @@ class CreateNewGroupViewController: UIViewController, UIImagePickerControllerDel
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
     
@@ -41,7 +42,7 @@ class CreateNewGroupViewController: UIViewController, UIImagePickerControllerDel
         
         let size = CGSize(width: 300, height: 300)
         let scaledImage = image.af_imageAspectScaled(toFill: size)
-        
+        self.groupImage.layer.cornerRadius = self.groupImage.frame.size.height/2
         groupImage.image = scaledImage
         
         dismiss(animated: true, completion: nil)
@@ -52,8 +53,8 @@ class CreateNewGroupViewController: UIViewController, UIImagePickerControllerDel
     @IBAction func createNewGroupButton(_ sender: Any) {
         
         if newGroupName.text != "" {
-            
-            guard let groupName = newGroupName.text else { return }
+                 
+            guard let groupName = self.newGroupName.text else { return }
             
             let docRef = Firestore.firestore().collection("groups").document(groupName)
             docRef.getDocument { (document, error) in
@@ -68,7 +69,7 @@ class CreateNewGroupViewController: UIViewController, UIImagePickerControllerDel
                                     "members" : [Auth.auth().currentUser?.uid],
                                     "messages": nil] as [String : Any]
                     
-                        Firestore.firestore().collection("groups").document(groupName).setData(data) { (error) in
+                        Firestore.firestore().collection("groups").document(groupName).setData(data){ (error) in
                             if let error = error {
                                 print("DEBUG: Failed to make new group \(error.localizedDescription)")
                                 return
@@ -84,8 +85,6 @@ class CreateNewGroupViewController: UIViewController, UIImagePickerControllerDel
                     }
                 }
             }
+                }
         }
     }
-        
-        
-}
