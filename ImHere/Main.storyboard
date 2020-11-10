@@ -17,13 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="plus_photo" translatesAutoresizingMaskIntoConstraints="NO" id="86a-AD-vpM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="plus_photo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86a-AD-vpM">
                                 <rect key="frame" x="40" y="100" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Y5D-TK-9RB" appends="YES" id="dr0-eQ-Ewp"/>
-                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWr-9E-6kz">
                                 <rect key="frame" x="40" y="192" width="202" height="49"/>
@@ -125,7 +122,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Lobby" id="jCb-CY-0kZ"/>
                     <connections>
-                        <outlet property="profilePicture" destination="86a-AD-vpM" id="gFg-LQ-YAh"/>
+                        <outlet property="profilePic" destination="86a-AD-vpM" id="noS-0h-acl"/>
+                        <outlet property="usernameLabel" destination="G5W-hf-lbm" id="XtX-lS-dZB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

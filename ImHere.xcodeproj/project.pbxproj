@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3ED9F71525562541001F1558 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ED9F71425562541001F1558 /* GoogleService-Info.plist */; };
+		3ED9F85F2559E74D001F1558 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9F85E2559E74D001F1558 /* User.swift */; };
+		3ED9F8812559E7B0001F1558 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9F8802559E7B0001F1558 /* Service.swift */; };
 		74E7AA5EF0C1D70A2ED41F47 /* Pods_ImHereTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025F05D971622C3C55DBB2D0 /* Pods_ImHereTests.framework */; };
 		7C98BFB95ADB01A2F2540318 /* Pods_ImHere_ImHereUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BE1C30D51DCCDF56D9757D /* Pods_ImHere_ImHereUITests.framework */; };
 		8036EF3C2557FEFD00C62050 /* GroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8036EF3B2557FEFD00C62050 /* GroupChatViewController.swift */; };
@@ -60,6 +62,8 @@
 /* Begin PBXFileReference section */
 		025F05D971622C3C55DBB2D0 /* Pods_ImHereTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImHereTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED9F71425562541001F1558 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3ED9F85E2559E74D001F1558 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3ED9F8802559E7B0001F1558 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ImHere/Model/Service.swift; sourceTree = SOURCE_ROOT; };
 		5863B3306EBEB59E7ECD0D03 /* Pods-ImHereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHereTests.debug.xcconfig"; path = "Target Support Files/Pods-ImHereTests/Pods-ImHereTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8036EF3B2557FEFD00C62050 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
 		8036EF40255807E500C62050 /* GroupMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMapViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +148,28 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3ED9F85D2559E741001F1558 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3ED9F85E2559E74D001F1558 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3ED9F8EC255A0956001F1558 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F09B4299255674F300FDFD3D /* LobbyViewController.swift */,
+				F09B42A72556899B00FDFD3D /* SettingsViewController.swift */,
+				8036EF3B2557FEFD00C62050 /* GroupChatViewController.swift */,
+				8036EF40255807E500C62050 /* GroupMapViewController.swift */,
+				8036EF45255808CB00C62050 /* GroupMembersViewController.swift */,
+				8036EF872558296B00C62050 /* InvitationsViewController.swift */,
+				8036EF8C255829A300C62050 /* CreateNewGroupViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		809ABC99254F62130006552C = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +196,7 @@
 		809ABCA4254F62130006552C /* ImHere */ = {
 			isa = PBXGroup;
 			children = (
+				3ED9F85D2559E741001F1558 /* Model */,
 				3ED9F71425562541001F1558 /* GoogleService-Info.plist */,
 				809ABCDE254F63490006552C /* Utilities */,
 				809ABCDD254F63440006552C /* API */,
@@ -233,14 +260,7 @@
 		809ABCDB254F62F80006552C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				809ABCE1254F64A10006552C /* ConversationsController.swift */,
-				F09B4299255674F300FDFD3D /* LobbyViewController.swift */,
-				F09B42A72556899B00FDFD3D /* SettingsViewController.swift */,
-				8036EF3B2557FEFD00C62050 /* GroupChatViewController.swift */,
-				8036EF40255807E500C62050 /* GroupMapViewController.swift */,
-				8036EF45255808CB00C62050 /* GroupMembersViewController.swift */,
-				8036EF872558296B00C62050 /* InvitationsViewController.swift */,
-				8036EF8C255829A300C62050 /* CreateNewGroupViewController.swift */,
+				3ED9F8EC255A0956001F1558 /* ViewControllers */,
 				809ABCDC254F631D0006552C /* Authentication */,
 				8036EFB1255834E000C62050 /* LobbyGroupCell.swift */,
 				8036EFB62558352E00C62050 /* MemberCell.swift */,
@@ -252,6 +272,7 @@
 		809ABCDC254F631D0006552C /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				809ABCE1254F64A10006552C /* ConversationsController.swift */,
 				809ABCEF254F64B30006552C /* LoginController.swift */,
 				809ABCE9254F64B30006552C /* RegistrationController.swift */,
 			);
@@ -261,6 +282,7 @@
 		809ABCDD254F63440006552C /* API */ = {
 			isa = PBXGroup;
 			children = (
+				3ED9F8802559E7B0001F1558 /* Service.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -533,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8036EF3C2557FEFD00C62050 /* GroupChatViewController.swift in Sources */,
+				3ED9F8812559E7B0001F1558 /* Service.swift in Sources */,
 				809ABCF0254F64B30006552C /* RegistrationController.swift in Sources */,
 				809ABCF6254F64B30006552C /* LoginController.swift in Sources */,
 				809ABCAA254F62130006552C /* ViewController.swift in Sources */,
@@ -542,6 +565,7 @@
 				F09B429A255674F300FDFD3D /* LobbyViewController.swift in Sources */,
 				809ABCA6254F62130006552C /* AppDelegate.swift in Sources */,
 				8036EF882558296B00C62050 /* InvitationsViewController.swift in Sources */,
+				3ED9F85F2559E74D001F1558 /* User.swift in Sources */,
 				809ABCE5254F64A10006552C /* CustomTextField.swift in Sources */,
 				8036EF8D255829A300C62050 /* CreateNewGroupViewController.swift in Sources */,
 				809ABCF4254F64B30006552C /* InputContainerView.swift in Sources */,

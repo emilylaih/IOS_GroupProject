@@ -7,12 +7,19 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    
+    //properties
+    private var users = [User]()
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var profilePic: UIImageView!
 
+    //lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        authenticateUser()
         // Do any additional setup after loading the view.
     }
     
@@ -44,6 +51,43 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
         present(picker, animated: true, completion: nil)
     }
     
+    
+    
+    //API
+    func authenticateUser() {
+        if Auth.auth().currentUser?.uid == nil {
+            
+            print("DEBUG: User is not logged in. Present login screen here..")
+        }
+        else {
+            
+            Service.fetchOwn { users in
+                self.users = users
+                print("DEBUG: Self User in Lobby  \(users)")
+                
+                self.usernameLabel.text = users[0].username
+                
+                
+                //setting own profile image to UIImageView profilePic
+                guard let url = URL(string: users[0].profileImageUrl) else{ return }
+                self.profilePic.sd_setImage(with: url)
+                self.profilePic.layer.borderWidth = 1
+                self.profilePic.layer.masksToBounds = true
+                self.profilePic.layer.borderColor = UIColor.black.cgColor
+                self.profilePic.layer.cornerRadius = self.profilePic.frame.size.height/2
+                self.profilePic.clipsToBounds = true
+                
+                
+                
+                
+            }
+            
+            //print("DEBUG: User id is \(Auth.auth().currentUser!.uid)")
+        }
+    }
+    
+    
+    
 //    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 //        let image = info[.editedImage] as! UIImage
 //        
@@ -55,19 +99,5 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
 //        dismiss(animated: true, completion: nil)
 //    }
     
-
-
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
