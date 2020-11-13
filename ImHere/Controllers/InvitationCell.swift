@@ -9,6 +9,11 @@ import UIKit
 
 class InvitationCell: UITableViewCell {
 
+    @IBOutlet weak var acceptButton: UIButton!
+    @IBOutlet weak var declineButton: UIButton!
+    @IBOutlet weak var groupNameText: UILabel!
+    @IBOutlet weak var senderText: UILabel!
+    @IBOutlet weak var groupImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

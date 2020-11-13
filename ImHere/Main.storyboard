@@ -244,7 +244,7 @@
         <!--Group Chat View Controller-->
         <scene sceneID="2Hu-5A-AEL">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="NmA-5A-4W3" userLabel="Group Chat View Controller" customClass="GroupChatViewController" customModule="ImHere" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NmA-5A-4W3" userLabel="Group Chat View Controller" customClass="GroupChatViewController" customModule="ImHere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fyg-XX-beo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -484,7 +484,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uy5-cM-iUC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uy5-cM-iUC">
                                 <rect key="frame" x="0.0" y="157" width="422" height="739"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -538,6 +538,13 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="acceptButton" destination="6AN-M1-YeY" id="CGa-Qm-g3I"/>
+                                            <outlet property="declineButton" destination="ltx-Qf-gIP" id="0n1-UJ-QzI"/>
+                                            <outlet property="groupImage" destination="5ey-RH-g7y" id="UC3-1a-8vA"/>
+                                            <outlet property="groupNameText" destination="Ef8-eg-WLL" id="6y0-hm-afs"/>
+                                            <outlet property="senderText" destination="r7Y-ls-S7k" id="OE2-2W-f5b"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -553,6 +560,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Invitations" id="8Ih-i0-ASD"/>
+                    <connections>
+                        <outlet property="tableview" destination="uy5-cM-iUC" id="bFA-Ni-v5G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fm-9A-9O4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
