@@ -210,7 +210,7 @@ Get the map’s pin location
 Display other members’ locations
 Send I’m Here notification
 
-### Login/Sign-up Page
+### Login/Sign-up(maintain login after shutdowm program) Page
 
 <img src="http://g.recordit.co/a3DNUio9Jj.gif" width=200>
 <img src="http://g.recordit.co/5F5jjQeVda.gif" width=200>
