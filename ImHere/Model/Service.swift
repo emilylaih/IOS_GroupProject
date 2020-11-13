@@ -49,6 +49,27 @@ struct Service {
         }
     }
     
+    static func fetchGroups(completion: @escaping([Groups]) -> Void) {
+        var groups = [Groups]()
+        Firestore.firestore().collection("groups").getDocuments { (snapshot, error) in
+            snapshot?.documents.forEach({ document in
+                
+                let dictionary = document.data()
+                let group = Groups(dictionary: dictionary)
+                
+                groups.append(group)
+                completion(groups)
+                
+                
+                //print("DEBUG: Username is \(user.username)")
+                //print("DEBUG: Fullname is \(user.fullname)")
+                //print("DEBUG: UID is \(user.uid)")
+                
+            })
+        }
+    }
+    
+    
     
     
 }

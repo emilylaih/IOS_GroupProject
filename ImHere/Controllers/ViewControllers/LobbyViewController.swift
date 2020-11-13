@@ -15,14 +15,15 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
     
     //properties
     private var users = [User]()
-    var groups = [[String: Any]]()
+    private var groups = [Groups]()
 
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
 
     //lifecycle
     override func viewDidLoad() {
-        authenticateUser()
+        //authenticateUser()
+        getGroups()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
@@ -65,9 +66,9 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
             Service.fetchOwn { users in
                 self.users = users
                 print("DEBUG: Self User in Lobby  \(users)")
-                
+
                 self.usernameLabel.text = users[0].username
-                
+
                 //setting own profile image to UIImageView profilePic
                 guard let url = URL(string: users[0].profileImageUrl) else{ return }
                 self.profilePic.sd_setImage(with: url)
@@ -76,25 +77,19 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
                 self.profilePic.layer.borderColor = UIColor.black.cgColor
                 self.profilePic.layer.cornerRadius = self.profilePic.frame.size.height/2
                 self.profilePic.clipsToBounds = true
-                
+
             }
-            
             //print("DEBUG: User id is \(Auth.auth().currentUser!.uid)")
         }
     }
     
-    
-    
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        let image = info[.editedImage] as! UIImage
-//        
-//        let size = CGSize(width: 300, height: 300)
-//        let scaledImage = image.af_imageAspectScaled(toFill: size)
-//        
-//        imageView.image = scaledImage
-//        
-//        dismiss(animated: true, completion: nil)
-//    }
+    func getGroups() {
+        Service.fetchGroups { groups in
+            self.groups = groups
+            print(groups)
+            
+        }
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
