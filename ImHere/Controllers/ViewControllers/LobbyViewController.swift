@@ -16,7 +16,7 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
     
     //properties
     private var users = [User]()
-    private var groups = [Groups]()
+    private var myGroups = [Groups]()
 
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
@@ -90,15 +90,15 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
     
     func getGroups() {
         Service.fetchGroups { groups in
-            self.groups = groups
+            self.myGroups = groups
             print(groups)
-            
+            print(groups.count)
         }
     }
     
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return myGroups.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
