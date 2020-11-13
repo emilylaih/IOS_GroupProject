@@ -84,9 +84,10 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
     }
     
     func getGroups() {
-        Service.fetchGroups { groups in
-            self.groups = groups
-            print(groups)
+        print("starting fetchGroups")
+        Service.fetchGroups { QuerySnapshot in
+            //self.groups = groups
+            print(QuerySnapshot)
             
         }
     }
