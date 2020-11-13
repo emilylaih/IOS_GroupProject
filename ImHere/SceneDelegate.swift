@@ -27,7 +27,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let LobbyViewController = main.instantiateViewController(withIdentifier: "LobbyViewController")
         
             window?.rootViewController = LobbyViewController
-
             
         }
         // if the user is not logged in, it will take the user to the login page
