@@ -51,7 +51,13 @@ struct Service {
     
     static func fetchGroups(completion: @escaping([Groups]) -> Void) {
         var groups = [Groups]()
-        Firestore.firestore().collection("groups").getDocuments { (snapshot, error) in
+        
+        
+        var myUserId = Auth.auth().currentUser!.uid;
+        var myGroups = Firestore.firestore().collectionGroup("groups").whereField("members." + myUserId, isEqualTo: true);
+        
+        
+        myGroups.getDocuments { (snapshot, error) in
             snapshot?.documents.forEach({ document in
                 
                 let dictionary = document.data()
