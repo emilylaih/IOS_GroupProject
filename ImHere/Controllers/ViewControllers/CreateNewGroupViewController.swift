@@ -11,11 +11,10 @@ import SDWebImage
 import AlamofireImage
 
 class CreateNewGroupViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    @IBOutlet weak var groupImage: UIImageView!
-    private var users = [User]()
-    
 
+    private var users = [User]()
+    private var groupImage: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,48 +23,66 @@ class CreateNewGroupViewController: UIViewController, UIImagePickerControllerDel
     }
     
     
-    @IBAction func onCameraButton(_ sender: Any) {
+    @IBOutlet weak var newGroupName: UITextField!
+    
+    
+    @IBOutlet weak var groupImagePic: UIImageView!
+    
+    @IBAction func onGroupPicButton(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
         
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
             picker.sourceType = .camera
-        } else {
+        }
+        else{
             picker.sourceType = .photoLibrary
         }
+        
         present(picker, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[.editedImage] as! UIImage
         
-        let size = CGSize(width: 300, height: 300)
-        let scaledImage = image.af_imageAspectScaled(toFill: size)
-        self.groupImage.layer.cornerRadius = self.groupImage.frame.size.height/2
-        groupImage.image = scaledImage
+        let image = info[.editedImage] as! UIImage
+        groupImage = image
+        let size = CGSize(width: 400, height: 400)
+        let scaledImage = image.af_imageScaled(to: size)
+        self.groupImagePic.layer.borderWidth = 1
+        self.groupImagePic.layer.masksToBounds = true
+        self.groupImagePic.layer.borderColor = UIColor.black.cgColor
+        self.groupImagePic.layer.cornerRadius = self.groupImagePic.frame.size.height/2
+        self.groupImagePic.clipsToBounds = true
+        groupImagePic.image = scaledImage
+        
         
         dismiss(animated: true, completion: nil)
     }
-    
-    @IBOutlet weak var newGroupName: UITextField!
 
     @IBAction func createNewGroupButton(_ sender: Any) {
         
         if newGroupName.text != "" {
                  
             guard let groupName = self.newGroupName.text else { return }
+
+            guard let imageData = groupImage!.jpegData(compressionQuality: 0.3) else { return }
             
-            let docRef = Firestore.firestore().collection("groups").document(groupName)
-            docRef.getDocument { (document, error) in
-                if let document = document {
-                    if document.exists{
-                        print("cannot make group Document data: \(document.data())")
-                    }
-                    else {
+            let filename = NSUUID().uuidString
+            let ref = Storage.storage().reference(withPath: "/profile_images/\(filename)")
+            
+            ref.putData(imageData, metadata: nil) { (meta, error) in
+                if let error = error {
+                    print("DEBUG: Failed to upload image with error \(error.localizedDescription)")
+                    return
+                }
+                
+                ref.downloadURL { (url, error) in
+                    guard let groupImageUrl = url?.absoluteString else { return }
                     
+                        
                         let data = ["groupName": groupName,
-                                    "groupImageUrl": nil,
+                                    "groupImageUrl": groupImageUrl,
                                     "members" : [Auth.auth().currentUser?.uid],
                                     "messages": nil] as [String : Any]
                     
@@ -85,6 +102,5 @@ class CreateNewGroupViewController: UIViewController, UIImagePickerControllerDel
                     }
                 }
             }
-                }
         }
-    }
+}

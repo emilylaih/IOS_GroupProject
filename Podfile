@@ -14,7 +14,9 @@ target 'ImHere' do
       pod "Firebase/Messaging"
       pod 'SDWebImage','~>4.4.2'
       pod 'JGProgressHUD','~>2.0.3'
-	pod 'AlamofireImage'
+      pod 'Alamofire'
+      pod 'AlamofireImage'
+      
 
 
   target 'ImHereTests' do

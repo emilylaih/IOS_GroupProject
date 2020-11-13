@@ -357,6 +357,7 @@ PODS:
   - SDWebImage/Core (4.4.8)
 
 DEPENDENCIES:
+  - Alamofire
   - AlamofireImage
   - Firebase
   - Firebase/Core
@@ -422,6 +423,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
 
-PODFILE CHECKSUM: 276cc8db790895f0dff5ff9551eb852d59dab994
+PODFILE CHECKSUM: 927403e7b4506bbbfb3a468c3304de10f2dfad19
 
 COCOAPODS: 1.10.0
