@@ -78,7 +78,7 @@
                                             <outlet property="groupImage" destination="jwp-uW-YVN" id="IdO-as-43j"/>
                                             <outlet property="groupNameText" destination="Rod-gL-eMS" id="YoJ-8F-0kH"/>
                                             <outlet property="numberText" destination="MpZ-UF-9oO" id="L9A-Na-lmf"/>
-                                            <segue destination="dva-8s-d3d" kind="show" id="U2d-tZ-ATg"/>
+                                            <segue destination="2KK-Pt-myI" kind="show" id="OMX-r8-lk8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -244,7 +244,7 @@
         <!--Group Chat View Controller-->
         <scene sceneID="2Hu-5A-AEL">
             <objects>
-                <viewController id="NmA-5A-4W3" userLabel="Group Chat View Controller" customClass="GroupChatViewController" customModule="ImHere" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="NmA-5A-4W3" userLabel="Group Chat View Controller" customClass="GroupChatViewController" customModule="ImHere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fyg-XX-beo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -355,6 +355,7 @@
         <scene sceneID="nEW-TQ-XYd">
             <objects>
                 <tabBarController id="2KK-Pt-myI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ACd-Sj-btH"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mzg-xT-cFX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -693,9 +694,6 @@
             <point key="canvasLocation" x="1831.8840579710147" y="73.660714285714278"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="U2d-tZ-ATg"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="ic_mail_outline_white_2x" width="48" height="48"/>
         <image name="icons8-settings" width="100" height="100"/>
