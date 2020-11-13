@@ -9,6 +9,9 @@ import UIKit
 
 class GroupChatViewController: UIViewController {
 
+    @IBOutlet weak var groupImage: UIImageView!
+    @IBOutlet weak var groupIDText: UILabel!
+    @IBOutlet weak var groupNameText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 

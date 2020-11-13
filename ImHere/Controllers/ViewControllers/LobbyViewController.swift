@@ -11,6 +11,7 @@ import SDWebImage
 
 class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var lobbyTableView: UITableView!
     
     
     //properties
@@ -26,6 +27,10 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
         getGroups()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        lobbyTableView.delegate = self
+        lobbyTableView.dataSource = self
+        self.lobbyTableView.reloadData()
     }
     
     
@@ -94,14 +99,15 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groups.count
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LobbyGroupCell") as! LobbyGroupCell
         
-        let group = groups[indexPath.row]
-        
+//        let group = groups[indexPath.row]
+        cell.groupNameText.text = "Testing"
+        cell.numberText.text = "5"
         
         return cell
     }

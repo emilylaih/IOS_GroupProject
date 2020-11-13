@@ -42,19 +42,22 @@ We would start implementing a location sharing app that people could form groups
 
 **Required Must-have Stories**
 
-The user can sign up or sign in to the app.
-The user can create or leave a group.
-Once joined a group the user can pinpoint the location to meetup or share his/her location and the user can see his/her members location if they show their location.
-There’s a chat box for the user to communicate with the group members.
-Settings where users can change username and password.
+[x] The user can sign up or sign in to the app.
+[] The user can create or leave a group.
+[] The user could share his/her own location.
+[] Once joined a group the user can pinpoint the location to meetup or share his/her location 
+[] User can see his/her members locations if they show their location.
+[] There’s a chat box for the user to communicate with the group members.
+[] Settings where users can change username and password.
 
 
 
 **Optional Nice-to-have Stories**
 
-The user’s location will have like a bitmoji image or other image.
-Maybe add a forget password feature.
-The user could add people to the friend’s list.
+[] The user location could change location image with bitmoji image or other images.
+[] Add a forget password feature where user could reset their password.
+[] There will be a friend list.
+[] The user could add people to the friend’s list.
 
 
 ### 2. Screen Archetypes
@@ -207,10 +210,16 @@ Get the map’s pin location
 Display other members’ locations
 Send I’m Here notification
 
-### Login/Sign-up Page
+### Login/Sign-up(maintain login after shutdowm program) Page
 
 <img src="http://g.recordit.co/a3DNUio9Jj.gif" width=200>
 <img src="http://g.recordit.co/5F5jjQeVda.gif" width=200>
+
+### Logout Page
+<img src="http://g.recordit.co/ZokaXV6LjB.gif" width=200>
+
+### Storyboard Flow
+<img src="http://g.recordit.co/vSYc8k9lZr.gif" width=200>
 
 
 
