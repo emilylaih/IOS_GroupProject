@@ -22,7 +22,7 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
 
     //lifecycle
     override func viewDidLoad() {
-        //authenticateUser()
+        authenticateUser()
         getGroups()
         super.viewDidLoad()
         // Do any additional setup after loading the view.

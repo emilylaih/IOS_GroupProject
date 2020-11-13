@@ -58,7 +58,6 @@ struct Service {
                 let group = Groups(dictionary: dictionary)
                 
                 groups.append(group)
-                completion(groups)
                 
                 
                 //print("DEBUG: Username is \(user.username)")
@@ -66,6 +65,7 @@ struct Service {
                 //print("DEBUG: UID is \(user.uid)")
                 
             })
+            completion(groups)
         }
     }
     
