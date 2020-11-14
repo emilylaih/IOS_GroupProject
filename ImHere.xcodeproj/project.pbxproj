@@ -39,6 +39,7 @@
 		809ABCF5254F64B30006552C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 809ABCEE254F64B30006552C /* README.md */; };
 		809ABCF6254F64B30006552C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ABCEF254F64B30006552C /* LoginController.swift */; };
 		AE65445F0D5A4D4D010EFC62 /* Pods_ImHere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891EF3379E08589882E474C5 /* Pods_ImHere.framework */; };
+		F051ED01255FC42800484AC5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F051ED00255FC42800484AC5 /* MapViewController.swift */; };
 		F09B429A255674F300FDFD3D /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B4299255674F300FDFD3D /* LobbyViewController.swift */; };
 		F09B42A82556899B00FDFD3D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B42A72556899B00FDFD3D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		A6BE1C30D51DCCDF56D9757D /* Pods_ImHere_ImHereUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImHere_ImHereUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BC3FBBC2E0082CB62DB623 /* Pods-ImHere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHere.release.xcconfig"; path = "Target Support Files/Pods-ImHere/Pods-ImHere.release.xcconfig"; sourceTree = "<group>"; };
 		EC945917278F314990777A2F /* Pods-ImHereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImHereTests.release.xcconfig"; path = "Target Support Files/Pods-ImHereTests/Pods-ImHereTests.release.xcconfig"; sourceTree = "<group>"; };
+		F051ED00255FC42800484AC5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F09B4299255674F300FDFD3D /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		F09B42A72556899B00FDFD3D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 				8036EF45255808CB00C62050 /* GroupMembersViewController.swift */,
 				8036EF872558296B00C62050 /* InvitationsViewController.swift */,
 				8036EF8C255829A300C62050 /* CreateNewGroupViewController.swift */,
+				F051ED00255FC42800484AC5 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				809ABC9F254F62130006552C /* Frameworks */,
 				809ABCA0254F62130006552C /* Resources */,
 				FB84972A681030A09F77B709 /* [CP] Embed Pods Frameworks */,
+				B62CA88B8EB63A67862F8C1B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -367,6 +371,7 @@
 				809ABCC0254F62140006552C /* Frameworks */,
 				809ABCC1254F62140006552C /* Resources */,
 				AEC4E0AB3E1C2A8DD67EE445 /* [CP] Embed Pods Frameworks */,
+				1772AC00A92123807EAEF4CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -450,6 +455,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1772AC00A92123807EAEF4CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImHere-ImHereUITests/Pods-ImHere-ImHereUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImHere-ImHereUITests/Pods-ImHere-ImHereUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImHere-ImHereUITests/Pods-ImHere-ImHereUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2B5F335B888A913C2963FA19 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -533,6 +555,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImHere-ImHereUITests/Pods-ImHere-ImHereUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B62CA88B8EB63A67862F8C1B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImHere/Pods-ImHere-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImHere/Pods-ImHere-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImHere/Pods-ImHere-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FB84972A681030A09F77B709 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -565,6 +604,7 @@
 				8036EFB2255834E000C62050 /* LobbyGroupCell.swift in Sources */,
 				8036EF46255808CB00C62050 /* GroupMembersViewController.swift in Sources */,
 				8036EFBC2558357C00C62050 /* InvitationCell.swift in Sources */,
+				F051ED01255FC42800484AC5 /* MapViewController.swift in Sources */,
 				F09B429A255674F300FDFD3D /* LobbyViewController.swift in Sources */,
 				809ABCA6254F62130006552C /* AppDelegate.swift in Sources */,
 				8036EF882558296B00C62050 /* InvitationsViewController.swift in Sources */,
