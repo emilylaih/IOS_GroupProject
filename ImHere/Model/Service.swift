@@ -7,7 +7,9 @@
 
 import Firebase
 
+
 struct Service {
+    
     static func fetchUsers(completion: @escaping([User]) -> Void) {
         var users = [User]()
         Firestore.firestore().collection("users").getDocuments { (snapshot, error) in
@@ -49,14 +51,12 @@ struct Service {
         }
     }
     
-    
-    
+
     
     
     static func fetchGroups(completion: @escaping([Groups]) -> Void) {
-        var groups = [Groups]()
         print("fefreervereveve")
-
+        var groups = [Groups]()
         let myUserId = Auth.auth().currentUser!.uid;
         let myGroups = Firestore.firestore().collectionGroup("groups").whereField("members", arrayContains: myUserId)
         print("here")
@@ -68,13 +68,11 @@ struct Service {
                 for document in querySnapshot!.documents {
                     let dictionary = document.data()
                     let group = Groups(dictionary: dictionary)
-                 
                     groups.append(group)
                 }
                 completion(groups)
             }
     }
-    
     
     
     

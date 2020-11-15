@@ -9,23 +9,23 @@ import UIKit
 import Firebase
 import SDWebImage
 
-class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
+class LobbyViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var lobbyTableView: UITableView!
-    
+    private var groups = [Groups]()
     
     //properties
     private var users = [User]()
-    private var myGroups = [Groups]()
+
 
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
-
+    
     //lifecycle
     override func viewDidLoad() {
+        super.viewDidLoad()
         authenticateUser()
         getGroups()
-        super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         lobbyTableView.delegate = self
@@ -87,26 +87,34 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate & U
             //print("DEBUG: User id is \(Auth.auth().currentUser!.uid)")
         }
     }
+
     
     func getGroups() {
         Service.fetchGroups { groups in
-            self.myGroups = groups
+            self.groups = groups
+            self.lobbyTableView.reloadData()
             print(groups)
-            print(groups.count)
         }
     }
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myGroups.count
+        return groups.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LobbyGroupCell") as! LobbyGroupCell
         
-//        let group = groups[indexPath.row]
-        cell.groupNameText.text = "Testing"
-        cell.numberText.text = "5"
+        let group = groups[indexPath.row]
+        cell.groupNameText.text = group.groupName
+        cell.numberText.text = String(group.members.count)
+        let url = URL(string: group.groupImageUrl)
+        cell.groupImage.sd_setImage(with: url)
+        cell.groupImage.layer.borderWidth = 1
+        cell.groupImage.layer.masksToBounds = true
+        cell.groupImage.layer.borderColor = UIColor.black.cgColor
+        cell.groupImage.layer.cornerRadius = cell.groupImage.frame.size.height/2
+        cell.groupImage.clipsToBounds = true
         
         return cell
     }
