@@ -107,7 +107,7 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
         let group = groups[indexPath.row]
         cell.groupNameText.text = group.groupName
-        cell.numberText.text = String(group.members.count)
+        cell.numberText.text = String(group.members.count) + "/50"
         let url = URL(string: group.groupImageUrl)
         cell.groupImage.sd_setImage(with: url)
         cell.groupImage.layer.borderWidth = 1
