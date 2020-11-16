@@ -13,9 +13,11 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
     @IBOutlet weak var lobbyTableView: UITableView!
     private var groups = [Groups]()
+    private var namesOfGroups = [String]()
     
     //properties
     private var users = [User]()
+    private var members = [AnyObject]()
 
 
     @IBOutlet weak var usernameLabel: UILabel!
@@ -82,20 +84,35 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 self.profilePic.layer.borderColor = UIColor.black.cgColor
                 self.profilePic.layer.cornerRadius = self.profilePic.frame.size.height/2
                 self.profilePic.clipsToBounds = true
-
+                print(self.users)
             }
             //print("DEBUG: User id is \(Auth.auth().currentUser!.uid)")
         }
     }
+//
+//    func getGroups() {
+//
+//        Service.fetchGroups { members in
+//            self.members = members
+//            print("members array here")
+//            print(self.members)
+//        }
+//    }
 
     
     func getGroups() {
         Service.fetchGroups { groups in
             self.groups = groups
+            for group in self.groups {
+                self.namesOfGroups.append(group.groupName)
+            }
             self.lobbyTableView.reloadData()
             print(groups)
-        }
+            print(self.namesOfGroups)
+            print("Start")
+            }
     }
+
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
