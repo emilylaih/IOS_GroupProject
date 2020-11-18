@@ -16,6 +16,8 @@ target 'ImHere' do
       pod 'JGProgressHUD','~>2.0.3'
       pod 'Alamofire'
       pod 'AlamofireImage'
+      pod 'GoogleMaps'
+      pod 'GooglePlaces' 
       
 
 
