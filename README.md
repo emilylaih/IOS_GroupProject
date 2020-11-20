@@ -222,5 +222,14 @@ Send I’m Here notification
 <img src="http://g.recordit.co/vSYc8k9lZr.gif" width=200>
 
 
+### Create Group/ Location service permission
+<img src="http://g.recordit.co/HzRFNwigi9.gif" width=200>
+
+
+### User's current location on google map
+<img src="http://g.recordit.co/HAVm9jD5n2.gif" width=200>
+
+
+
 
 
