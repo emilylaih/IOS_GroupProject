@@ -14,6 +14,7 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var lobbyTableView: UITableView!
     private var groups = [Groups]()
     private var namesOfGroups = [String]()
+    var group: Groups?
     
     //properties
     private var users = [User]()
@@ -28,18 +29,16 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
         super.viewDidLoad()
         authenticateUser()
         getGroups()
-        // Do any additional setup after loading the view.
         
         lobbyTableView.delegate = self
         lobbyTableView.dataSource = self
         self.lobbyTableView.reloadData()
+        print("finish")
     }
     
     
     @IBAction func NewGroupButton(_ sender: Any) {
     }
-    
-    @IBOutlet weak var profilePicture: UIImageView!
     
 
     @IBAction func onCameraButton(_ sender: Any) {
@@ -64,6 +63,7 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     //API
     func authenticateUser() {
+        
         if Auth.auth().currentUser?.uid == nil {
             
             print("DEBUG: User is not logged in. Present login screen here..")
@@ -86,18 +86,8 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 self.profilePic.clipsToBounds = true
                 print(self.users)
             }
-            //print("DEBUG: User id is \(Auth.auth().currentUser!.uid)")
         }
     }
-//
-//    func getGroups() {
-//
-//        Service.fetchGroups { members in
-//            self.members = members
-//            print("members array here")
-//            print(self.members)
-//        }
-//    }
 
     
     func getGroups() {
@@ -109,8 +99,7 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
             self.lobbyTableView.reloadData()
             print(groups)
             print(self.namesOfGroups)
-            print("Start")
-            }
+        }
     }
 
     
@@ -134,6 +123,33 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
         cell.groupImage.clipsToBounds = true
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        group = groups[indexPath.row]
+        performSegue(withIdentifier: "GroupSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GroupSegue"
+        {
+            print("start groups")
+            let vc = segue.destination as? UITabBarController
+            var viewControllers = vc!.viewControllers
+            let vc1 = viewControllers![0] as? UINavigationController
+            let vc2 = viewControllers![1] as? UINavigationController
+            viewControllers = vc1?.viewControllers
+            let groupChat = viewControllers?.first as! GroupChatViewController
+            print(groupChat)
+            viewControllers = vc2?.viewControllers
+            let groupMap = viewControllers!.first as! GroupMapViewController
+            
+            
+            print("passing groups")
+                
+            groupChat.groups = group
+            groupMap.groups = group
+        }
     }
 
 }

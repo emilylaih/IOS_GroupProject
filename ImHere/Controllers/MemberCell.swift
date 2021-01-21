@@ -8,7 +8,9 @@
 import UIKit
 
 class MemberCell: UITableViewCell {
-
+    @IBOutlet weak var memberName: UILabel!
+    @IBOutlet weak var memberImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

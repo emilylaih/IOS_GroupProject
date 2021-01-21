@@ -19,4 +19,12 @@ struct Groups {
         self.members = dictionary["members"] as? [String] ?? [""]
         self.messages = dictionary["messages"] as? String ?? ""
     }
+    
+    func getGroupName() -> String{
+        return groupName
+    }
+    
+    func getGroupImageUrl() -> String{
+        return groupImageUrl
+    }
 }

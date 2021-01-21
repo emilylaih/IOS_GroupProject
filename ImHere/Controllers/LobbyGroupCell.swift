@@ -8,7 +8,6 @@
 import UIKit
 
 class LobbyGroupCell: UITableViewCell {
-
     @IBOutlet weak var groupImage: UIImageView!
     @IBOutlet weak var groupNameText: UILabel!
     @IBOutlet weak var numberText: UILabel!

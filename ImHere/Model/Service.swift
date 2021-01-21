@@ -31,12 +31,13 @@ struct Service {
     
     static func fetchOwn(completion: @escaping([User]) -> Void) {
         var own = [User]()
+        print(own)
         Firestore.firestore().collection("users").getDocuments { (snapshot, error) in
             snapshot?.documents.forEach({ document in
                 
                 let dictionary = document.data()
                 let user = User(dictionary: dictionary)
-                
+                print(user.uid)
                 
                 if Auth.auth().currentUser!.uid == user.uid {
                     own.append(user)
@@ -61,6 +62,8 @@ struct Service {
             })
         }
     }
+    
+    
 }
 
     

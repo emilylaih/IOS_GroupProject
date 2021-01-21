@@ -20,6 +20,9 @@ struct User {
         self.username = dictionary["username"] as? String ?? ""
         self.fullname = dictionary["fullname"] as? String ?? ""
         self.email = dictionary["email"] as? String ?? ""
-
     }
+    
+//    func getUser(StringID){
+//
+//    }
 }
