@@ -6,25 +6,47 @@
 //
 
 import UIKit
+import Firebase
 
 class GroupMembersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var groups: Groups?
+    var users = [User]()
+    var own: User?
+    var membersQuery = [User]()
     @IBOutlet weak var groupName: UILabel!
     @IBOutlet weak var groupImage: UIImageView!
     @IBOutlet weak var memberTableViewCell: UITableView!
     
     override func viewDidLoad() {
-        print(groups)
-        print("Member UIDs")
-        print(groups?.members)
-        
-        setTitles()
+        //print(groups)
+        //print("Member UIDs")
+        //print(groups?.members)
         super.viewDidLoad()
+        print("getmembershere")
+        getMembers()
+        setTitles()
         memberTableViewCell.delegate = self
         memberTableViewCell.dataSource = self
-        self.memberTableViewCell.reloadData()
-
         // Do any additional setup after loading the view.
+    }
+    
+    
+    //very inefficient
+    func getMembers() {
+        Service.fetchUsers { users in
+            self.users = users
+            for member in self.groups!.members{
+                for user in self.users {
+                    if !self.membersQuery.contains(user) && member == user.uid {
+                        self.membersQuery.append(user)
+                    }
+                }
+            }
+            print(self.membersQuery)
+            print(self.membersQuery[1].uid)
+            self.memberTableViewCell.reloadData()
+        }
+        
     }
     
     func setTitles() {
@@ -50,8 +72,13 @@ class GroupMembersViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell") as! MemberCell
         
-        let members = groups?.members
-        cell.memberName.text = members![indexPath.row]
+        //let own = membersQuery[indexPath.row]
+        //cell.memberName.text = own.uid
+
+        //let memberID = members![indexPath.row];
+        
+        
+        
 //        let url = URL(string: group.groupImageUrl)
 //        self.groupImage.sd_setImage(with: url)
 //        self.groupImage.layer.borderWidth = 1

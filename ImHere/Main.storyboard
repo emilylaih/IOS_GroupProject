@@ -559,11 +559,11 @@
             </objects>
             <point key="canvasLocation" x="4879.7101449275369" y="73.660714285714278"/>
         </scene>
-        <!--Item-->
+        <!--Chat-->
         <scene sceneID="uO8-8F-4rN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dva-8s-d3d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="message" catalog="system" id="tdW-2G-BcO"/>
+                    <tabBarItem key="tabBarItem" title="Chat" image="message" catalog="system" id="tdW-2G-BcO"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uk7-dP-Jq1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Cj-Aq-Duu">
@@ -583,7 +583,7 @@
         <scene sceneID="g3o-VL-UAF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GBS-XD-IPA" userLabel="Map" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" image="map" catalog="system" id="qy5-4X-M4c"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="qy5-4X-M4c"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="872-Tp-FRe">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>

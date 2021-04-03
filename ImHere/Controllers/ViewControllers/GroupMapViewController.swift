@@ -9,7 +9,7 @@ import UIKit
 
 class GroupMapViewController: UIViewController {
     var groups: Groups?
-
+    
     @IBOutlet weak var groupPic: UIImageView!
     @IBOutlet weak var groupName: UILabel!
     

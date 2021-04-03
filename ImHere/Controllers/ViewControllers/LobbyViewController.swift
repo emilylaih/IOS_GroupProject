@@ -13,11 +13,12 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
     @IBOutlet weak var lobbyTableView: UITableView!
     private var groups = [Groups]()
+    private var allUsers = [User]()
     private var namesOfGroups = [String]()
     var group: Groups?
     
     //properties
-    private var users = [User]()
+    var users = [User]()
     private var members = [AnyObject]()
 
 
@@ -88,6 +89,7 @@ class LobbyViewController: UIViewController, UIImagePickerControllerDelegate, UI
             }
         }
     }
+
 
     
     func getGroups() {
